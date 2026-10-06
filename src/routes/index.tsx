@@ -236,7 +236,15 @@ function Index() {
           </div>
           <h2 className="font-serif text-2xl font-extrabold">Risco Zero Pra Você - 7 Dias de Garantia Incondicional</h2>
           <p className="text-sm text-muted-foreground">
-            Irmã, confio tanto no Código da Pregação Memorável que eu vou tirar todo o risco das suas costas. Adquire hoje, entra na plataforma, busca pela temática da sua próxima pregação, usa o Editor Minhas Palavras, baixa em PDF, envia pro WhatsApp, e pronto seu esboço de pregação está pronto em menos de 15 minutos! Se em até 7 dias você achar que não é pra você, que não facilitou sua vida, que não te deixou mais segura no púlpito... É só me chamar no WhatsApp que eu devolvo 100% do seu valor. Sem perguntas, sem constrangimento, sem letra miúda. Você não tem nada a perder. Ou você sai com seu esboço pronto em 15 minutos e é elogiada pelos seus pares, ou você não paga nada. O risco é todo meu.
+            Risco zero. 7 dias de garantia.
+
+
+            Teste a plataforma. Se em 7 dias achar que não é pra você, me chama no WhatsApp e devolvo 100% do seu valor. Sem perguntas, sem letra miúda.
+
+
+            Ou você tem seu esboço em 15 minutos, ou não paga nada.
+
+            O risco é todo meu!
           </p>
           <CTA>QUERO MEU ACESSO COM GARANTIA DE 7 DIAS</CTA>
         </div>
