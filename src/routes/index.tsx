@@ -192,7 +192,7 @@ function Index() {
             <div className="relative space-y-4 rounded-2xl border-2 border-banner bg-card p-6 pt-8 text-center shadow-[0_0_40px_-10px_var(--banner)]">
               <span className="absolute -top-4 left-1/2 -translate-x-1/2 rounded-full bg-banner px-4 py-1 text-xs font-extrabold text-banner-foreground">MAIS VENDIDO</span>
               <h3 className="font-serif text-2xl font-extrabold">PLANO PREMIUM</h3>
-              <p className="text-xs text-gold">Todos os bônus que já valem R$47…</p>
+              <p className="text-xs text-gold">{"\n"}</p>
               <p className="text-sm">De <s className="text-muted-foreground">R$197</s> por apenas</p>
               <p className="font-serif text-5xl font-extrabold text-cta-hover">R$29,90</p>
               <p className="text-xs text-muted-foreground">Acesso Vitalício - Pagamento Único</p>
@@ -200,8 +200,8 @@ function Index() {
               <ul className="space-y-2 text-left">
                 <Item>Tudo do Básico</Item>
                 <Item>Biblioteca Completa com 300 esboços: FÉ E AVIVAMENTO, ESPÍRITO SANTO, PALAVRA, GRAÇA, ESPERANÇA</Item>
-                <Item><strong className="text-banner">BÔNUS 01:</strong> Checklist da Pregação Segura - 7 perguntas pra nunca mais pregar heresia</Item>
-                <Item><strong className="text-banner">BÔNUS 02:</strong> Planner da Pregadora - organize suas pregações do mês em 10 minutos</Item>
+                <Item>{"\n"}</Item>
+                <Item><strong className="text-banner">BÔNUS:</strong> Planner da Pregadora - organize suas pregações do mês em poucos minutos</Item>
               </ul>
               <div className="space-y-1 border-t pt-4 text-xs text-muted-foreground">
                 <p className="flex items-center justify-center gap-1"><ShieldCheck className="h-4 w-4 text-gold" />Risco zero: 7 dias de garantia incondicional</p>
