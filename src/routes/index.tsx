@@ -36,6 +36,9 @@ const beneficios = [
 ];
 
 const faq = [
+  ["O que é o Editor Minhas Palavras?", "É o seu caderninho pessoal dentro da plataforma. Ele pega um esboço pronto da plataforma e transforma na sua mensagem, com as suas palavras, com as suas histórias da cozinha, da família, do seu dia a dia. É o que faz a pregação ser sua de verdade, do seu jeito de falar. Tudo que você escreve salva sozinho. Se fechar e voltar amanhã, continua tudo lá."],
+  ["O que é o Template para uma Pregação Memorável?", "É um processo validado com 12 passos, usado todos os dias por pregadores super experientes. Ele nasceu para resolver a maior dor: pregar e ver a plateia voando, desanimada, no modo automático. Esse template te guia para criar uma mensagem que prende a atenção, que engaja e faz a irmã se sentir representada, sentindo que a mensagem tocou no coração dela. Tudo com começo, meio e fim bem amarrados e com segurança bíblica."],
+  ["O que é a Biblioteca Inteligente?", "Biblioteca é onde ficam todos os esboços guardados. A Biblioteca Inteligente é essa biblioteca organizada por temas para facilitar a sua vida. Ela funciona como o Google da pregação. Você não precisa mais folhear 500 PDFs soltos e frios feitos por homem para homem. Lá você encontra em segundos centenas de esboços separados pelos temas que você mais prega: Ansiedade, Medo, Oração, Mulheres da Bíblia e outros."],
   ["Quais são as formas de pagamento?", "Você paga com Pix ou Cartão de Crédito, em pagamento único. Checkout 100% seguro. Assim que o pagamento é aprovado, o acesso já é liberado. Sem mensalidade, sem pegadinha."],
   ["O acesso à plataforma é vitalício mesmo?", "Sim. Você paga uma vez e o acesso é seu pra sempre. Sem mensalidade. Todas as atualizações de esboços que as 22+ validadoras ajudarem a melhorar entram pra você sem custo extra."],
   ["Como e quando eu recebo o acesso? É imediato?", "É imediato. Assim que o pagamento cai, você recebe no seu e-mail e no seu WhatsApp o link de acesso à plataforma Código da Pregação Memorável + o link da pasta no Google Drive organizada por temáticas. É só clicar e entrar."],
@@ -192,7 +195,6 @@ function Index() {
             <div className="relative space-y-4 rounded-2xl border-2 border-banner bg-card p-6 pt-8 text-center shadow-[0_0_40px_-10px_var(--banner)]">
               <span className="absolute -top-4 left-1/2 -translate-x-1/2 rounded-full bg-banner px-4 py-1 text-xs font-extrabold text-banner-foreground">MAIS VENDIDO</span>
               <h3 className="font-serif text-2xl font-extrabold">PLANO PREMIUM</h3>
-              <p className="text-xs text-gold">{"\n"}</p>
               <p className="text-sm">De <s className="text-muted-foreground">R$197</s> por apenas</p>
               <p className="font-serif text-5xl font-extrabold text-cta-hover">R$29,90</p>
               <p className="text-xs text-muted-foreground">Acesso Vitalício - Pagamento Único</p>
@@ -200,7 +202,6 @@ function Index() {
               <ul className="space-y-2 text-left">
                 <Item>Tudo do Básico</Item>
                 <Item>Biblioteca Completa com 300 esboços: FÉ E AVIVAMENTO, ESPÍRITO SANTO, PALAVRA, GRAÇA, ESPERANÇA</Item>
-                <Item>{"\n"}</Item>
                 <Item><strong className="text-banner">BÔNUS:</strong> Planner da Pregadora - organize suas pregações do mês em poucos minutos</Item>
               </ul>
               <div className="space-y-1 border-t pt-4 text-xs text-muted-foreground">
