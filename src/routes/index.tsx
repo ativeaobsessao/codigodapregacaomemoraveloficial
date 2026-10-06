@@ -105,11 +105,11 @@ function Index() {
         <div className="relative mx-auto max-w-2xl space-y-6 px-4 pb-12 pt-6">
           <div className="flex justify-center"><div className="overflow-hidden rounded-full"><Logo size={120} /></div></div>
           <h1 className="text-center font-serif text-2xl font-extrabold leading-tight sm:text-4xl">
-            Está com dificuldade para construir a mensagem da sua pregação?&nbsp;
-
-
-Veja como é simples construir uma mensagem edificante e memorável em 15 minutos!
+            Está com dificuldade para construir a mensagem da sua pregação?
           </h1>
+          <h3 className="text-center font-serif text-lg font-semibold italic leading-snug sm:text-2xl">
+            Veja como é simples construir uma mensagem edificante e memorável em 15 minutos👇
+          </h3>
           <div style={{ maxWidth: 400, margin: "0 auto" }}>
             <div style={{ padding: "177.78% 0 0 0", position: "relative", borderRadius: 16, overflow: "hidden", background: "#000" }}>
               <iframe
