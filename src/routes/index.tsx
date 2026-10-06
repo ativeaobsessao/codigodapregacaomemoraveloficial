@@ -28,11 +28,11 @@ function CTA({ children }: { children: React.ReactNode }) {
 }
 
 const beneficios = [
-  ["TEMPLATE PARA UMA PREGAÇÃO MEMORÁVEL", "Siga os 12 Passos para montar uma pregação memorável - todo processo foi consolidado e validado por pregadoras que usam toda vez que vão pregar;"],
-  ["BIBLIOTECA INTELIGENTE", "Estilo Google, separada por temática. Nunca mais folheie 500 PDFs de esboços genéricos e feitos para homem. Acesse a plataforma, digite a temática da sua pregação ou clique nas fixadas e em 5 segundos aparecem vários esboços.Seleciona o esboço que mais tocou seu coração;"],
-  ["EDITOR MINHAS PALAVRAS", "O botão preto onde a mágica acontece. O segredo pra você nunca mais pregar mensagem fria de outro. Clique em QUERO USAR COM MINHAS PALAVRAS e o esboço inteiro é copiado campo por campo pro seu editor. Troque o gancho pela sua história da cozinha, troque a aplicação pelas palavras que você se sente segura falando. Tudo salva sozinho. Se fechar e voltar amanhã, tá lá. É a sua mensagem, não cópia."],
-  ["PÚLPITO EM 1 CLIQUE", "PDF Premium + WhatsApp: para facilitar a consulta do seu esboço baixe em PDF e imprima se quiser. Ou com apenas um clique envie a versão completa pro seu próprio WhatsApp e consulte direto no seu WhatsApp, já salvo no seu celular para acessar o esboço no púlpito."],
-  ["ARQUIVO NO GOOGLE DRIVE ORGANIZADO + ACESSO IMEDIATO.", "Além da plataforma, você recebe no seu e-mail e no seu WhatsApp o link da pasta no Drive com todos os esboços separados por temáticas: Ansiedade/Medo/Coragem, Oração/Presença, Espera/Fé, Mulheres da Bíblia, Cura/Restauração, Família/Perdão."],
+  ["TEMPLATE PARA UMA PREGAÇÃO MEMORÁVEL", "Siga os 12 Passos para montar uma pregação memorável - todo processo foi consolidado e validado por pregadoras experientes que usam toda vez que vão pregar"],
+  ["BIBLIOTECA INTELIGENTE", "Estilo Google, separada por temática. Nunca mais folheie 500 PDFs de esboços genéricos e feitos sobretudo pra homem. Basta digitar a temática da sua pregação ou clique nas fixadas e em segundos aparecem vários esboços."],
+  ["EDITOR MINHAS PALAVRAS", "depois de selecionar qual esboço vai usar, realize as modificações que achar pertinentes. Em minutos você consegue criar um esboço 100% original, que segue uma metodologia extremamente validada para estruturar mensagens que prendem a atenção das pessoas, desde início até o fm."],
+  ["BAIXE EM PDF OU COMPARTILHE NO WHATSAPP", "com um clique baixe o seu esboço autoral em arquivo PDF. Ou se preferir, compartilhe seu esboço na íntegra no WhatsApp"],
+  ["ARQUIVO NO GOOGLE DRIVE ORGANIZADO + ACESSO IMEDIATO.", "Além da plataforma, você recebe no seu e-mail e no seu WhatsApp o link da pasta no Drive com todos os esboços separados por temáticas"],
 ];
 
 const faq = [
@@ -105,7 +105,10 @@ function Index() {
         <div className="relative mx-auto max-w-2xl space-y-6 px-4 pb-12 pt-6">
           <div className="flex justify-center"><div className="overflow-hidden rounded-full"><Logo size={120} /></div></div>
           <h1 className="text-center font-serif text-2xl font-extrabold leading-tight sm:text-4xl">
-            Está com dificuldade para construir a mensagem da sua pregação? Veja como é simples construir uma mensagem edificante e memorável em 15 minutos!
+            Está com dificuldade para construir a mensagem da sua pregação?&nbsp;
+
+
+Veja como é simples construir uma mensagem edificante e memorável em 15 minutos!
           </h1>
           <div style={{ maxWidth: 400, margin: "0 auto" }}>
             <div style={{ padding: "177.78% 0 0 0", position: "relative", borderRadius: 16, overflow: "hidden", background: "#000" }}>
@@ -182,7 +185,7 @@ function Index() {
               <p className="text-xs text-muted-foreground">Pagamento Único - Acesso Imediato e vitalício</p>
               <a href="#checkout-basico" className="block rounded-full border-2 border-gold py-3 font-bold text-gold hover:bg-gold hover:text-primary-foreground">Quero o Plano Básico</a>
               <ul className="space-y-2 text-left">
-                <Item>100 esboços</Item><Item>Biblioteca Inteligente</Item><Item>Template</Item><Item>Editor</Item><Item>Púlpito</Item>
+                <Item>100 esboços</Item><Item>Biblioteca Inteligente</Item><Item>Template para uma pregação memorável</Item><Item>Editor Minhas Palavras</Item><Item>Baixe em PDF ou compartilhe no WhatsApp&nbsp;</Item>
                 <Item>Pasta Google Drive: Ansiedade/Medo/Coragem, Oração/Presença, Espera/Fé/Perseverança, Mulheres da Bíblia, Cura/Restauração, Família/Perdão</Item>
               </ul>
             </div>
