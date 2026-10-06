@@ -182,14 +182,14 @@ function Index() {
           <div className="grid gap-8 md:grid-cols-2 md:items-start">
             <div className="space-y-4 rounded-2xl border bg-card p-6 text-center">
               <h3 className="font-serif text-2xl font-extrabold">PLANO BÁSICO</h3>
-              <p className="text-xs text-muted-foreground">Sem acesso aos bônus exclusivos</p>
+              <p className="text-xs text-muted-foreground">{"\n"}</p>
               <p className="text-sm">De <s className="text-muted-foreground">R$97</s> por apenas</p>
               <p className="font-serif text-4xl font-extrabold text-gold">R$19,90</p>
               <p className="text-xs text-muted-foreground">Pagamento Único - Acesso Imediato e vitalício</p>
               <a href="#checkout-basico" className="block rounded-full border-2 border-gold py-3 font-bold text-gold hover:bg-gold hover:text-primary-foreground">Quero o Plano Básico</a>
               <ul className="space-y-2 text-left">
-                <Item>100 esboços</Item><Item>Biblioteca Inteligente</Item><Item>Template para uma pregação memorável</Item><Item>Editor Minhas Palavras</Item><Item>Baixe em PDF ou compartilhe no WhatsApp&nbsp;</Item>
-                <Item>Pasta Google Drive: Ansiedade/Medo/Coragem, Oração/Presença, Espera/Fé/Perseverança, Mulheres da Bíblia, Cura/Restauração, Família/Perdão</Item>
+                <Item>Template para uma pregação memorável</Item><Item>Biblioteca Inteligente</Item><Item>Editor Minhas Palavras</Item><Item>Baixe em PDF ou compartilhe no WhatsApp&nbsp;</Item><Item>100 Esboços Editáveis</Item>
+                <Item>Pasta Google Drive organizadas por temáticas: Ansiedade/Medo/Coragem, Oração/Presença, Espera/Fé/Perseverança, Mulheres da Bíblia, Cura/Restauração, Família/Perdão</Item>
               </ul>
             </div>
             <div className="relative space-y-4 rounded-2xl border-2 border-banner bg-card p-6 pt-8 text-center shadow-[0_0_40px_-10px_var(--banner)]">
@@ -201,7 +201,7 @@ function Index() {
               <a href="#checkout-premium" className="btn-cta">Aproveitar a Oferta Premium</a>
               <ul className="space-y-2 text-left">
                 <Item>Tudo do Básico</Item>
-                <Item>Biblioteca Completa com 300 esboços: FÉ E AVIVAMENTO, ESPÍRITO SANTO, PALAVRA, GRAÇA, ESPERANÇA</Item>
+                <Item>Biblioteca Completa com 300 esboços editáveis: FÉ E AVIVAMENTO, ESPÍRITO SANTO, PALAVRA, GRAÇA, ESPERANÇA</Item>
                 <Item><strong className="text-banner">BÔNUS:</strong> Planner da Pregadora - organize suas pregações do mês em poucos minutos</Item>
               </ul>
               <div className="space-y-1 border-t pt-4 text-xs text-muted-foreground">
