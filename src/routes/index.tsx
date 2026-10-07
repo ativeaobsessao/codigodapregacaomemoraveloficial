@@ -10,8 +10,16 @@ import ps2 from "@/assets/print-prova-social-02.png.asset.json";
 import ps3 from "@/assets/print-prova-social-03.png.asset.json";
 import fotoAna from "@/assets/foto-ana.png.asset.json";
 import library from "@/assets/library.jpg";
+import part1 from "@/assets/part01-pv.mp4.asset.json";
+import part2 from "@/assets/part02-pv.mp4.asset.json";
+import printPregacao from "@/assets/print-pregacao.jpeg.asset.json";
+import eb1 from "@/assets/esboco-preview-01.png.asset.json";
+import eb2 from "@/assets/esboco-preview-02.png.asset.json";
+import eb3 from "@/assets/esboco-preview-03.png.asset.json";
+import eb4 from "@/assets/esboco-preview-04.png.asset.json";
+import eb5 from "@/assets/esboco-preview-05.png.asset.json";
 import { Logo } from "@/components/Logo";
-import { Carousel } from "@/components/Carousel";
+import { Carousel, MultiCarousel } from "@/components/Carousel";
 
 export const Route = createFileRoute("/")({
   head: () => ({
