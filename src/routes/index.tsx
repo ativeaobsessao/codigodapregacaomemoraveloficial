@@ -10,8 +10,16 @@ import ps2 from "@/assets/print-prova-social-02.png.asset.json";
 import ps3 from "@/assets/print-prova-social-03.png.asset.json";
 import fotoAna from "@/assets/foto-ana.png.asset.json";
 import library from "@/assets/library.jpg";
+import part1 from "@/assets/part01-pv.mp4.asset.json";
+import part2 from "@/assets/part02-pv.mp4.asset.json";
+import printPregacao from "@/assets/print-pregacao.jpeg.asset.json";
+import eb1 from "@/assets/esboco-preview-01.png.asset.json";
+import eb2 from "@/assets/esboco-preview-02.png.asset.json";
+import eb3 from "@/assets/esboco-preview-03.png.asset.json";
+import eb4 from "@/assets/esboco-preview-04.png.asset.json";
+import eb5 from "@/assets/esboco-preview-05.png.asset.json";
 import { Logo } from "@/components/Logo";
-import { Carousel } from "@/components/Carousel";
+import { Carousel, MultiCarousel } from "@/components/Carousel";
 
 export const Route = createFileRoute("/")({
   head: () => ({
@@ -124,13 +132,13 @@ function Index() {
           <div id="demonstracao" className="mx-auto flex max-w-[808px] flex-col items-center gap-4 md:flex-row md:items-start md:justify-center md:gap-6">
             <div className="w-full max-w-[380px] space-y-2 text-center">
               <span className="inline-block rounded-full bg-gold px-3 py-1 text-xs font-bold text-primary-foreground">PASSO 1: BIBLIOTECA INTELIGENTE</span>
-              <video src="/part01-pv.mp4" autoPlay loop muted playsInline className="w-full rounded-2xl border border-gold/20 shadow-2xl" />
+              <video src={part1.url} autoPlay loop muted playsInline preload="auto" className="w-full rounded-[24px] shadow-2xl border border-white/10" />
               <p className="text-xs text-muted-foreground">Ache seu tema em segundos</p>
             </div>
             <ArrowDown className="h-8 w-8 shrink-0 animate-bounce text-gold md:mt-48 md:-rotate-90" />
             <div className="w-full max-w-[380px] space-y-2 text-center">
               <span className="inline-block rounded-full bg-gold px-3 py-1 text-xs font-bold text-primary-foreground">PASSO 2: EDITOR MINHAS PALAVRAS</span>
-              <video src="/part02-pv.mp4" autoPlay loop muted playsInline className="w-full rounded-2xl border border-gold/20 shadow-2xl" />
+              <video src={part2.url} autoPlay loop muted playsInline preload="auto" className="w-full rounded-[24px] shadow-2xl border border-white/10" />
               <p className="text-xs text-muted-foreground">Edite com suas palavras - salva sozinho</p>
             </div>
           </div>
@@ -159,7 +167,7 @@ function Index() {
             <h3 className="text-center font-serif text-xl font-extrabold">NO WHATSAPP</h3>
             <div className="mx-auto w-full max-w-[280px] rounded-[2.5rem] border-[10px] border-muted bg-background p-1 shadow-2xl">
               <div className="mx-auto mb-1 h-4 w-24 rounded-full bg-muted" />
-              <img src="/print-pregacao.jpeg" alt="Esboço enviado no WhatsApp" className="w-full rounded-[1.8rem]" />
+              <img src={printPregacao.url} alt="Esboço enviado no WhatsApp" className="w-full rounded-[1.8rem]" />
             </div>
           </div>
         </div>
@@ -167,11 +175,22 @@ function Index() {
       </section>
 
       {/* ESBOÇOS */}
-      <section className="space-y-6 px-4 py-12">
+      <section id="esbocos-preview" className="space-y-6 px-4 py-12">
         <h2 className="mx-auto max-w-xl text-center font-serif text-2xl font-extrabold text-gold">
           Veja Alguns Esboços que Você Tem Acesso Assim que Adquire!
         </h2>
-        <Carousel id="carousel-esbocos" label="Imagem do Esboço aqui" />
+        <MultiCarousel
+          id="carousel-esbocos"
+          label="Esboço"
+          items={[
+            { src: eb1.url, tema: "Medo do Futuro" },
+            { src: eb2.url, tema: "Ansiedade" },
+            { src: eb3.url, tema: "Comparação" },
+            { src: eb4.url, tema: "Comparação" },
+            { src: eb5.url, tema: "Ser Vista por Deus" },
+          ]}
+        />
+        <p className="text-center text-xs text-muted-foreground">Deslize para ver as temáticas →</p>
         <CTA>QUERO MEU ACESSO À PLATAFORMA</CTA>
       </section>
 

@@ -46,3 +46,58 @@ export function Carousel({ id, label = "", count = 4, aspect = "aspect-[3/4]", i
     </div>
   );
 }
+
+export function MultiCarousel({ id, label = "", items }: { id: string; label?: string; items: { src: string; tema: string }[] }) {
+  const ref = useRef<HTMLDivElement>(null);
+  const [active, setActive] = useState(0);
+  const total = items.length;
+
+  const slideW = () => {
+    const el = ref.current;
+    if (!el || !el.firstElementChild) return el?.clientWidth ?? 0;
+    return (el.firstElementChild as HTMLElement).offsetWidth;
+  };
+  const go = (i: number) => {
+    const el = ref.current;
+    if (!el) return;
+    const max = total - 1;
+    const next = i > max ? 0 : i < 0 ? max : i;
+    el.scrollTo({ left: slideW() * next, behavior: "smooth" });
+    setActive(next);
+  };
+
+  useEffect(() => {
+    const t = setInterval(() => setActive((a) => {
+      go(a + 1);
+      return (a + 1) % total;
+    }), 4000);
+    return () => clearInterval(t);
+  }, [total]);
+
+  return (
+    <div id={id} className="mx-auto w-full">
+      <div
+        ref={ref}
+        onScroll={(e) => {
+          const el = e.currentTarget;
+          setActive(Math.min(total - 1, Math.round(el.scrollLeft / Math.max(1, slideW()))));
+        }}
+        className="flex snap-x snap-mandatory overflow-x-auto scroll-smooth [scrollbar-width:none] [&::-webkit-scrollbar]:hidden"
+      >
+        {items.map((it, i) => (
+          <div key={i} className="w-full shrink-0 snap-center px-2 sm:w-1/2 lg:w-1/3">
+            <div className="overflow-hidden rounded-2xl bg-white shadow-xl">
+              <img src={it.src} alt={`${label} ${i + 1}`} loading="lazy" className="aspect-[3/4] w-full object-cover object-top" />
+              <p className="border-t border-black/5 px-3 py-2 text-center text-[11px] font-bold uppercase tracking-wide text-neutral-700">{it.tema}</p>
+            </div>
+          </div>
+        ))}
+      </div>
+      <div className="mt-4 flex justify-center gap-2">
+        {Array.from({ length: total }).map((_, i) => (
+          <button key={i} aria-label={`Slide ${i + 1}`} onClick={() => go(i)} className={`h-2 rounded-full transition-all ${i === active ? "w-6 bg-gold" : "w-2 bg-muted"}`} />
+        ))}
+      </div>
+    </div>
+  );
+}
