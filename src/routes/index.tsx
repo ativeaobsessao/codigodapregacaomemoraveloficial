@@ -113,15 +113,17 @@ function Index() {
           <h3 className="text-center font-serif text-lg font-semibold italic leading-snug sm:text-2xl">
             Veja como é simples construir uma mensagem edificante e memorável em 15 minutos👇
           </h3>
-          <div style={{ maxWidth: 400, margin: "0 auto" }}>
-            <div style={{ padding: "177.78% 0 0 0", position: "relative", borderRadius: 16, overflow: "hidden", background: "#000" }}>
-              <iframe
-                src="https://player.vimeo.com/video/1233011327?badge=0&autopause=0&player_id=0&app_id=58479&title=0&byline=0&portrait=0"
-                frameBorder="0"
-                allow="autoplay; fullscreen; picture-in-picture"
-                style={{ position: "absolute", top: 0, left: 0, width: "100%", height: "100%" }}
-                title="Código da Pregação Memorável"
-              />
+          <div id="demonstracao" className="mx-auto flex max-w-[808px] flex-col items-center gap-4 md:flex-row md:items-start md:justify-center md:gap-6">
+            <div className="w-full max-w-[380px] space-y-2 text-center">
+              <span className="inline-block rounded-full bg-gold px-3 py-1 text-xs font-bold text-primary-foreground">PASSO 1: BIBLIOTECA INTELIGENTE</span>
+              <video src="/part01-pv.mp4" autoPlay loop muted playsInline className="w-full rounded-2xl border border-gold/20 shadow-2xl" />
+              <p className="text-xs text-muted-foreground">Ache seu tema em segundos</p>
+            </div>
+            <ArrowDown className="h-8 w-8 shrink-0 animate-bounce text-gold md:mt-48 md:-rotate-90" />
+            <div className="w-full max-w-[380px] space-y-2 text-center">
+              <span className="inline-block rounded-full bg-gold px-3 py-1 text-xs font-bold text-primary-foreground">PASSO 2: EDITOR MINHAS PALAVRAS</span>
+              <video src="/part02-pv.mp4" autoPlay loop muted playsInline className="w-full rounded-2xl border border-gold/20 shadow-2xl" />
+              <p className="text-xs text-muted-foreground">Edite com suas palavras - salva sozinho</p>
             </div>
           </div>
           <p className="text-center font-serif text-lg italic text-gold">
