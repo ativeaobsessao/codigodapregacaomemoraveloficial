@@ -175,11 +175,22 @@ function Index() {
       </section>
 
       {/* ESBOÇOS */}
-      <section className="space-y-6 px-4 py-12">
+      <section id="esbocos-preview" className="space-y-6 px-4 py-12">
         <h2 className="mx-auto max-w-xl text-center font-serif text-2xl font-extrabold text-gold">
           Veja Alguns Esboços que Você Tem Acesso Assim que Adquire!
         </h2>
-        <Carousel id="carousel-esbocos" label="Imagem do Esboço aqui" />
+        <MultiCarousel
+          id="carousel-esbocos"
+          label="Esboço"
+          items={[
+            { src: eb1.url, tema: "Medo do Futuro" },
+            { src: eb2.url, tema: "Ansiedade" },
+            { src: eb3.url, tema: "Comparação" },
+            { src: eb4.url, tema: "Comparação" },
+            { src: eb5.url, tema: "Ser Vista por Deus" },
+          ]}
+        />
+        <p className="text-center text-xs text-muted-foreground">Deslize para ver as temáticas →</p>
         <CTA>QUERO MEU ACESSO À PLATAFORMA</CTA>
       </section>
 
