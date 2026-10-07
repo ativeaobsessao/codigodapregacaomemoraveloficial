@@ -1,6 +1,14 @@
 import { createFileRoute } from "@tanstack/react-router";
 import { useEffect, useState } from "react";
-import { Check, ChevronDown, ShieldCheck, Star } from "lucide-react";
+import { ArrowDown, Check, ChevronDown, ShieldCheck, Star } from "lucide-react";
+import pdf1 from "@/assets/pdf-pagina-01.png.asset.json";
+import pdf2 from "@/assets/pdf-pagina-02.png.asset.json";
+import pdf3 from "@/assets/pdf-pagina-03.png.asset.json";
+import pdf4 from "@/assets/pdf-pagina-04.png.asset.json";
+import ps1 from "@/assets/print-prova-social-01.png.asset.json";
+import ps2 from "@/assets/print-prova-social-02.png.asset.json";
+import ps3 from "@/assets/print-prova-social-03.png.asset.json";
+import fotoAna from "@/assets/foto-ana.png.asset.json";
 import library from "@/assets/library.jpg";
 import { Logo } from "@/components/Logo";
 import { Carousel } from "@/components/Carousel";
@@ -105,7 +113,7 @@ function Index() {
       <section className="relative">
         <img src={library} alt="" width={768} height={1344} className="absolute inset-0 h-full w-full object-cover opacity-40" />
         <div className="absolute inset-0 bg-gradient-to-b from-background/40 via-background/70 to-background" />
-        <div className="relative mx-auto max-w-2xl space-y-6 px-4 pb-12 pt-6">
+        <div className="relative mx-auto max-w-4xl space-y-6 px-4 pb-12 pt-6">
           <div className="flex justify-center"><div className="overflow-hidden rounded-full"><Logo size={120} /></div></div>
           <h1 className="text-center font-serif text-2xl font-extrabold leading-tight sm:text-4xl">
             Está com dificuldade para construir a mensagem da sua pregação?
@@ -137,6 +145,27 @@ function Index() {
         </div>
       </section>
 
+      {/* RESULTADO */}
+      <section id="resultado-prova" className="space-y-6 px-4 py-12">
+        <h2 className="mx-auto max-w-2xl text-center font-serif text-2xl font-extrabold text-gold sm:text-3xl">Em minutos você tem o esboço pronto para ser consultado durante a pregação!</h2>
+        <p className="text-center text-muted-foreground">Com um clique você baixa em PDF ou envia para seu WhatsApp:</p>
+        <div className="mx-auto grid max-w-4xl gap-8 md:grid-cols-2">
+          <div className="space-y-3">
+            <h3 className="text-center font-serif text-xl font-extrabold">ESBOÇO EM PDF</h3>
+            <Carousel id="carousel-pdf" label="Página do PDF" images={[pdf1.url, pdf2.url, pdf3.url, pdf4.url]} />
+            <p className="text-center text-xs text-muted-foreground">← Deslize para ver as 4 páginas →</p>
+          </div>
+          <div className="space-y-3">
+            <h3 className="text-center font-serif text-xl font-extrabold">NO WHATSAPP</h3>
+            <div className="mx-auto w-full max-w-[280px] rounded-[2.5rem] border-[10px] border-muted bg-background p-1 shadow-2xl">
+              <div className="mx-auto mb-1 h-4 w-24 rounded-full bg-muted" />
+              <img src="/print-pregacao.jpeg" alt="Esboço enviado no WhatsApp" className="w-full rounded-[1.8rem]" />
+            </div>
+          </div>
+        </div>
+        <CTA>QUERO MEU ACESSO À PLATAFORMA</CTA>
+      </section>
+
       {/* ESBOÇOS */}
       <section className="space-y-6 px-4 py-12">
         <h2 className="mx-auto max-w-xl text-center font-serif text-2xl font-extrabold text-gold">
@@ -165,14 +194,14 @@ function Index() {
       </section>
 
       {/* PROVAS */}
-      <section className="space-y-6 px-4 py-12">
+      <section id="prova-social" className="space-y-6 px-4 py-12">
         <h2 className="mx-auto max-w-xl text-center font-serif text-2xl font-extrabold text-gold">
           QUEM ADQUIRIU ACESSO AO CÓDIGO DA PREGAÇÃO MEMORÁVEL, RECOMENDA!
         </h2>
         <p className="mx-auto max-w-xl text-center text-sm text-muted-foreground">
           +22 pregadoras acessam diariamente e ajudam a melhorar os esboços - para que as novas integrantes como você recebam o melhor material possível!
         </p>
-        <Carousel id="carousel-provas" label="Print de WhatsApp aqui" aspect="aspect-[9/16]" />
+        <Carousel id="carousel-provas" label="Print de WhatsApp" images={[ps1.url, ps2.url, ps3.url]} />
         <CTA>QUERO MEU ACESSO À PLATAFORMA</CTA>
       </section>
 
@@ -214,6 +243,18 @@ function Index() {
                 <p>Compra 100% segura - Recebe no e-mail e WhatsApp</p>
               </div>
             </div>
+          </div>
+        </div>
+      </section>
+
+      {/* ANA */}
+      <section id="ana-idealizadora" className="px-4 py-12">
+        <div className="mx-auto flex max-w-4xl flex-col items-center gap-8 md:flex-row md:items-center">
+          <img src={fotoAna.url} alt="Ana Tavares" className="w-60 shrink-0 rounded-full border-[3px] border-gold shadow-2xl md:w-80" />
+          <div className="space-y-4 text-center md:text-left">
+            <h2 className="font-serif text-2xl font-extrabold text-gold sm:text-3xl">Quem criou o Código da Pregação Memorável?</h2>
+            <span className="inline-block rounded-full border border-gold px-3 py-1 text-xs font-bold text-gold">Mãe de 3 | 15+ anos pregando | Contadora</span>
+            <p className="text-sm leading-relaxed text-muted-foreground">Sou a Ana Tavares, mãe de 3 filhos, trabalho em contabilidade e prego a Palavra há mais de 15 anos na minha pequena comunidade. Via as novas pregadoras frustradas porque ninguém prestava atenção nos sermões. Como sempre tive facilidade de pregar de um jeito que todos entendem e se emocionam, analisei o que eu fazia diferente. Percebi que seguia sempre o mesmo processo. Transformei em um template de 12 passos e comecei a ensinar as novatas. O resultado foi unânime. Hoje esse método virou a plataforma para ajudar mulheres como você a pregarem com segurança em 15 minutos.</p>
           </div>
         </div>
       </section>
