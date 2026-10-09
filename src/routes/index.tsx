@@ -18,7 +18,7 @@ import eb2 from "@/assets/esboco-preview-02.png.asset.json";
 import eb3 from "@/assets/esboco-preview-03.png.asset.json";
 import eb4 from "@/assets/esboco-preview-04.png.asset.json";
 import eb5 from "@/assets/esboco-preview-05.png.asset.json";
-import logoImg from "@/assets/codigo-pregacao-logo-cutout.png.asset.json";
+import logoImg from "@/assets/logo-pregacao-dark-final.png.asset.json";
 import { Carousel, MultiCarousel } from "@/components/Carousel";
 
 export const Route = createFileRoute("/")({
@@ -128,7 +128,7 @@ function Index() {
         <img src={library} alt="" width={768} height={1344} className="absolute inset-0 h-full w-full object-cover opacity-40" />
         <div className="absolute inset-0 bg-gradient-to-b from-background/40 via-background/70 to-background" />
         <div className="relative mx-auto max-w-4xl space-y-6 px-4 pb-12 pt-6">
-          <div className="flex justify-center"><div className="rounded-xl bg-foreground/95 px-3 py-2"><img src={logoImg.url} alt="Código da Pregação Memorável" className="mx-auto w-full max-w-[160px]" /></div></div>
+          <img src={logoImg.url} alt="Código da Pregação Memorável" className="mx-auto mb-4 mt-8 block h-auto w-full max-w-[140px] object-contain opacity-90" />
           <h1 className="text-center font-serif text-2xl font-extrabold leading-tight sm:text-4xl">
             Está com dificuldade para construir a mensagem da sua pregação?
           </h1>
