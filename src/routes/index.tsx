@@ -142,6 +142,19 @@ function Index() {
               <p className="text-xs text-muted-foreground">Edite com suas palavras - salva sozinho</p>
             </div>
           </div>
+          <div className="flex justify-center"><ArrowDown className="h-8 w-8 animate-bounce text-gold" /></div>
+          <div className="mx-auto w-full max-w-[380px] space-y-2 text-center md:max-w-[640px]">
+            <span className="inline-block rounded-full bg-gold px-3 py-1 text-xs font-bold text-primary-foreground">PASSO 3: BAIXE E PREGUE</span>
+            <p className="text-xs text-muted-foreground">Baixe em PDF ou envie para seu WhatsApp</p>
+            <div className="grid gap-4 rounded-[24px] border border-white/10 bg-card p-3 shadow-2xl md:grid-cols-2 md:items-center">
+              <Carousel id="carousel-pdf" label="Página do PDF" images={[pdf1.url, pdf2.url, pdf3.url, pdf4.url]} />
+              <div className="mx-auto w-full max-w-[260px] rounded-[2.5rem] border-[10px] border-muted bg-background p-1 shadow-2xl">
+                <div className="mx-auto mb-1 h-4 w-24 rounded-full bg-muted" />
+                <img src={printPregacao.url} alt="Esboço enviado no WhatsApp" className="w-full rounded-[1.8rem]" />
+              </div>
+            </div>
+            <p className="text-xs text-muted-foreground">Com um clique, você baixa em PDF ou envia para seu WhatsApp</p>
+          </div>
           <p className="text-center font-serif text-lg italic text-gold">
             "Depois que comecei a usar o Código, toda vez que prego, escuto que lembraram da minha pregação a semana toda" - Relato de alunas
           </p>
@@ -151,27 +164,6 @@ function Index() {
             +22 mulheres já pregando + 4,9 de satisfação + Compra 100% segura + Garantia 7 dias
           </p>
         </div>
-      </section>
-
-      {/* RESULTADO */}
-      <section id="resultado-prova" className="space-y-6 px-4 py-12">
-        <h2 className="mx-auto max-w-2xl text-center font-serif text-2xl font-extrabold text-gold sm:text-3xl">Em minutos você tem o esboço pronto para ser consultado durante a pregação!</h2>
-        <p className="text-center text-muted-foreground">Com um clique você baixa em PDF ou envia para seu WhatsApp:</p>
-        <div className="mx-auto grid max-w-4xl gap-8 md:grid-cols-2">
-          <div className="space-y-3">
-            <h3 className="text-center font-serif text-xl font-extrabold">ESBOÇO EM PDF</h3>
-            <Carousel id="carousel-pdf" label="Página do PDF" images={[pdf1.url, pdf2.url, pdf3.url, pdf4.url]} />
-            <p className="text-center text-xs text-muted-foreground">← Deslize para ver as 4 páginas →</p>
-          </div>
-          <div className="space-y-3">
-            <h3 className="text-center font-serif text-xl font-extrabold">NO WHATSAPP</h3>
-            <div className="mx-auto w-full max-w-[280px] rounded-[2.5rem] border-[10px] border-muted bg-background p-1 shadow-2xl">
-              <div className="mx-auto mb-1 h-4 w-24 rounded-full bg-muted" />
-              <img src={printPregacao.url} alt="Esboço enviado no WhatsApp" className="w-full rounded-[1.8rem]" />
-            </div>
-          </div>
-        </div>
-        <CTA>QUERO MEU ACESSO À PLATAFORMA</CTA>
       </section>
 
       {/* ESBOÇOS */}
