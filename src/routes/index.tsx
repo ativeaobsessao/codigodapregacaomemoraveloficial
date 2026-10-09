@@ -18,7 +18,7 @@ import eb2 from "@/assets/esboco-preview-02.png.asset.json";
 import eb3 from "@/assets/esboco-preview-03.png.asset.json";
 import eb4 from "@/assets/esboco-preview-04.png.asset.json";
 import eb5 from "@/assets/esboco-preview-05.png.asset.json";
-import { Logo } from "@/components/Logo";
+import logoImg from "@/assets/codigo-pregacao-logo-cutout.png.asset.json";
 import { Carousel, MultiCarousel } from "@/components/Carousel";
 
 export const Route = createFileRoute("/")({
@@ -107,8 +107,14 @@ function Item({ children }: { children: React.ReactNode }) {
   );
 }
 
+function track() {
+  const w = window as unknown as { fbq?: (...a: unknown[]) => void };
+  w.fbq?.("track", "InitiateCheckout");
+}
+
 function Index() {
   const today = useToday();
+  const [upsell, setUpsell] = useState(false);
   const [open, setOpen] = useState<number | null>(null);
 
   return (
@@ -122,7 +128,7 @@ function Index() {
         <img src={library} alt="" width={768} height={1344} className="absolute inset-0 h-full w-full object-cover opacity-40" />
         <div className="absolute inset-0 bg-gradient-to-b from-background/40 via-background/70 to-background" />
         <div className="relative mx-auto max-w-4xl space-y-6 px-4 pb-12 pt-6">
-          <div className="flex justify-center"><div className="overflow-hidden rounded-full"><Logo size={120} /></div></div>
+          <div className="flex justify-center"><div className="rounded-xl bg-foreground/95 px-3 py-2"><img src={logoImg.url} alt="Código da Pregação Memorável" className="mx-auto w-full max-w-[160px]" /></div></div>
           <h1 className="text-center font-serif text-2xl font-extrabold leading-tight sm:text-4xl">
             Está com dificuldade para construir a mensagem da sua pregação?
           </h1>
@@ -227,7 +233,7 @@ function Index() {
               <p className="text-sm">De <s className="text-muted-foreground">R$97</s> por apenas</p>
               <p className="font-serif text-4xl font-extrabold text-gold">R$19,90</p>
               <p className="text-xs text-muted-foreground">Pagamento Único - Acesso Imediato e vitalício</p>
-              <a href="#checkout-basico" className="block rounded-full border-2 border-gold py-3 font-bold text-gold hover:bg-gold hover:text-primary-foreground">Quero o Plano Básico</a>
+              <button type="button" onClick={() => setUpsell(true)} className="block w-full rounded-full border-2 border-gold py-3 font-bold text-gold hover:bg-gold hover:text-primary-foreground">QUERO O PLANO BÁSICO</button>
               <ul className="space-y-2 text-left">
                 <Item>Template para uma pregação memorável</Item>
                 <Item>Biblioteca Inteligente</Item>
@@ -243,7 +249,7 @@ function Index() {
               <p className="text-sm">De <s className="text-muted-foreground">R$197</s> por apenas</p>
               <p className="font-serif text-5xl font-extrabold text-cta-hover">R$29,90</p>
               <p className="text-xs text-muted-foreground">Acesso Vitalício - Pagamento Único</p>
-              <a href="#checkout-premium" className="btn-cta">Aproveitar a Oferta Premium</a>
+              <a href="https://pay.kiwify.com.br/ZKBUdYI" onClick={track} className="btn-cta">QUERO O PLANO PREMIUM</a>
               <ul className="space-y-2 text-left">
                 <Item>Tudo do Básico</Item>
                 <Item>Biblioteca Completa com 300 esboços editáveis: FÉ E AVIVAMENTO, ESPÍRITO SANTO, PALAVRA, GRAÇA, ESPERANÇA</Item>
@@ -314,6 +320,18 @@ function Index() {
       <footer className="border-t px-4 py-6 text-center text-xs text-muted-foreground">
         Compra 100% segura | Acesso imediato por e-mail + WhatsApp | Suporte no WhatsApp
       </footer>
+
+      {upsell && (
+        <div onClick={() => setUpsell(false)} className="fixed inset-0 z-50 flex items-center justify-center bg-background/70 p-4 backdrop-blur-sm">
+          <div onClick={(e) => e.stopPropagation()} className="relative w-full max-w-[400px] space-y-4 rounded-2xl bg-foreground p-6 text-center text-background shadow-2xl">
+            <button type="button" aria-label="Fechar" onClick={() => setUpsell(false)} className="absolute right-3 top-2 text-2xl leading-none opacity-60 hover:opacity-100">×</button>
+            <h3 className="font-serif text-2xl font-extrabold">Espere! Leve o Premium por apenas R$ 24,90</h3>
+            <p className="text-sm opacity-80">Por apenas R$5 a mais você leva TODOS os esboços premium + bônus exclusivos</p>
+            <a href="https://pay.kiwify.com.br/Xih46up" onClick={track} className="btn-cta animate-pulse">QUERO APROVEITAR O DESCONTO E LEVAR O PREMIUM</a>
+            <a href="https://pay.kiwify.com.br/rxxtXTe" onClick={track} className="block text-xs underline opacity-60 hover:opacity-90">Não, quero apenas o Plano Básico mesmo</a>
+          </div>
+        </div>
+      )}
     </main>
   );
 }
