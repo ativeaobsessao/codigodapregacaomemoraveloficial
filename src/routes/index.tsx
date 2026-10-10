@@ -127,7 +127,7 @@ function Index() {
         <div className="relative mx-auto max-w-4xl space-y-6 px-4 pb-12 pt-6">
           <img src={logoImg.url} alt="Código da Pregação Memorável" className="mx-auto mb-4 mt-8 block h-auto w-full max-w-[140px] object-contain opacity-90" />
           <h1 className="text-center font-serif text-2xl font-extrabold leading-tight sm:text-4xl">
-            Está com dificuldade para construir a mensagem da sua pregação?
+            Está com dificuldade para construir o esboço da sua pregação?
           </h1>
           <h3 className="text-center font-serif text-lg font-semibold italic leading-snug sm:text-2xl">
             Veja como é simples construir uma mensagem edificante e memorável em 15 minutos👇
