@@ -220,7 +220,7 @@ function Index() {
           src={provaSocial.url}
           alt="Prints de WhatsApp de alunas do Código da Pregação Memorável"
           loading="lazy"
-          className="mx-auto block w-[90%] max-w-[380px] rounded-2xl border border-white/80 bg-white shadow-xl"
+          className="mx-auto block w-[90vw] max-w-[380px] rounded-2xl border border-white/80 bg-white shadow-xl"
         />
         <CTA>QUERO MEU ACESSO À PLATAFORMA</CTA>
       </section>
