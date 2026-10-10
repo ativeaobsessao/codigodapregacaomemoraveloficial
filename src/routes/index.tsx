@@ -5,9 +5,7 @@ import pdf1 from "@/assets/pdf-pagina-01.png.asset.json";
 import pdf2 from "@/assets/pdf-pagina-02.png.asset.json";
 import pdf3 from "@/assets/pdf-pagina-03.png.asset.json";
 import pdf4 from "@/assets/pdf-pagina-04.png.asset.json";
-import ps1 from "@/assets/print-prova-social-01.png.asset.json";
-import ps2 from "@/assets/print-prova-social-02.png.asset.json";
-import ps3 from "@/assets/print-prova-social-03.png.asset.json";
+import provaSocial from "@/assets/prova-social-combina.png.asset.json";
 import fotoAna from "@/assets/foto-ana.png.asset.json";
 import library from "@/assets/library.jpg";
 import part1 from "@/assets/part01-pv.mp4.asset.json";
@@ -218,7 +216,12 @@ function Index() {
         <p className="mx-auto max-w-xl text-center text-sm text-muted-foreground">
           +22 pregadoras acessam diariamente e ajudam a melhorar os esboços - para que as novas integrantes como você recebam o melhor material possível!
         </p>
-        <Carousel id="carousel-provas" label="Print de WhatsApp" images={[ps1.url, ps2.url, ps3.url]} />
+        <img
+          src={provaSocial.url}
+          alt="Prints de WhatsApp de alunas do Código da Pregação Memorável"
+          loading="lazy"
+          className="mx-auto block w-[90vw] max-w-[380px] rounded-2xl border border-white/80 bg-white shadow-xl"
+        />
         <CTA>QUERO MEU ACESSO À PLATAFORMA</CTA>
       </section>
 
