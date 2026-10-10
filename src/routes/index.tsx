@@ -14,7 +14,6 @@ import printPregacao from "@/assets/print-pregacao.jpeg.asset.json";
 import eb1 from "@/assets/esboco-preview-01.png.asset.json";
 import eb2 from "@/assets/esboco-preview-02.png.asset.json";
 import eb3 from "@/assets/esboco-preview-03.png.asset.json";
-import eb4 from "@/assets/esboco-preview-04.png.asset.json";
 import eb5 from "@/assets/esboco-preview-05.png.asset.json";
 import logoImg from "@/assets/logo-pregacao-dark-final.png.asset.json";
 import { Carousel, MultiCarousel } from "@/components/Carousel";
@@ -182,7 +181,6 @@ function Index() {
             { src: eb1.url, tema: "Medo do Futuro" },
             { src: eb2.url, tema: "Ansiedade" },
             { src: eb3.url, tema: "Comparação" },
-            { src: eb4.url, tema: "Comparação" },
             { src: eb5.url, tema: "Ser Vista por Deus" },
           ]}
         />
