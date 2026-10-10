@@ -204,7 +204,6 @@ function Index() {
               </li>
             ))}
           </ol>
-          <CTA>QUERO MEU ACESSO À PLATAFORMA</CTA>
         </div>
       </section>
 
@@ -222,7 +221,6 @@ function Index() {
           loading="lazy"
           className="mx-auto block w-[90vw] max-w-[380px] rounded-2xl border border-white/80 bg-white shadow-xl"
         />
-        <CTA>QUERO MEU ACESSO À PLATAFORMA</CTA>
       </section>
 
       {/* PLANOS */}
