@@ -7,7 +7,7 @@ import pdf3 from "@/assets/pdf-pagina-03.png.asset.json";
 import pdf4 from "@/assets/pdf-pagina-04.png.asset.json";
 import provaSocial from "@/assets/prova-social-combina.png.asset.json";
 import fotoAna from "@/assets/foto-ana.png.asset.json";
-import library from "@/assets/library.jpg";
+import library from "@/assets/pregadora.jpg";
 import part1 from "@/assets/part01-pv.mp4.asset.json";
 import part2 from "@/assets/part02-pv.mp4.asset.json";
 import printPregacao from "@/assets/print-pregacao.jpeg.asset.json";
@@ -122,16 +122,15 @@ function Index() {
 
       {/* HERO */}
       <section className="relative">
-        <img src={library} alt="" width={768} height={1344} className="absolute inset-0 h-full w-full object-cover opacity-40" />
-        <div className="absolute inset-0 bg-gradient-to-b from-background/40 via-background/70 to-background" />
+        <img src={library} alt="Mulher pregando no púlpito de uma igreja" width={768} height={1344} className="absolute inset-x-0 top-0 h-[900px] w-full object-cover object-top opacity-60" />
+        <div className="absolute inset-x-0 top-0 h-[900px] bg-gradient-to-b from-background/30 via-background/60 to-background" />
         <div className="relative mx-auto max-w-4xl space-y-6 px-4 pb-12 pt-6">
-          <img src={logoImg.url} alt="Código da Pregação Memorável" className="mx-auto mb-4 mt-8 block h-auto w-full max-w-[140px] object-contain opacity-90" />
+          <img src={logoImg.url} alt="Código da Pregação Memorável" className="mx-auto mb-4 mt-8 block h-auto w-full max-w-[220px] object-contain drop-shadow-[0_2px_10px_rgba(0,0,0,0.9)]" />
+          <h3 className="text-center font-serif text-lg font-semibold leading-snug sm:text-2xl">
+            Cria seu esboço autoral em  15 minutos!
+          </h3>
           <h1 className="text-center font-serif text-2xl font-extrabold leading-tight sm:text-4xl">
-            Cria seu esboço autoral em  15 minutos!
-
-
-Essa é a melhor forma para você realizar a sua pregação de forma segura e confiante🙏
-
+            Essa é a melhor forma para você realizar a sua pregação de forma segura e confiante🙏
           </h1>
           <h3 className="text-center font-serif text-lg font-semibold italic leading-snug sm:text-2xl">
             Veja como é simples construir uma mensagem edificante e memorável 👇
