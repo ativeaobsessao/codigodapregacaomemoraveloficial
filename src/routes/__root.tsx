@@ -83,6 +83,8 @@ export const Route = createRootRouteWithContext<{ queryClient: QueryClient }>()(
       { rel: "preconnect", href: "https://connect.facebook.net" },
       { rel: "dns-prefetch", href: "https://connect.facebook.net" },
       { rel: "dns-prefetch", href: "https://www.facebook.com" },
+      { rel: "preconnect", href: "https://pay.kiwify.com.br" },
+      { rel: "dns-prefetch", href: "https://pay.kiwify.com.br" },
       { rel: "stylesheet", href: appCss },
       { rel: "preconnect", href: "https://fonts.googleapis.com" },
       { rel: "preconnect", href: "https://fonts.gstatic.com", crossOrigin: "anonymous" },
@@ -91,17 +93,25 @@ export const Route = createRootRouteWithContext<{ queryClient: QueryClient }>()(
     ],
     scripts: [
       {
-        children: `!function(f,b,e,v,n,t,s)
-{if(f.fbq)return;n=f.fbq=function(){n.callMethod?
-n.callMethod.apply(n,arguments):n.queue.push(arguments)};
-if(!f._fbq)f._fbq=n;n.push=n;n.loaded=!0;n.version='2.0';
-n.queue=[];t=b.createElement(e);t.async=!0;t.defer=!0;
-t.src=v;s=b.getElementsByTagName(e)[0];
-s.parentNode.insertBefore(t,s)}(window, document,'script',
-'https://connect.facebook.net/en_US/fbevents.js');
-fbq('init', '1782310362686643');
-fbq('init', '1833853264476817');
-fbq('track', 'PageView');`,
+        children: `(function(w,d){
+if(w.loadMetaPixels)return;
+if(!w.fbq){var n=w.fbq=function(){n.callMethod?n.callMethod.apply(n,arguments):n.queue.push(arguments)};
+if(!w._fbq)w._fbq=n;n.push=n;n.loaded=true;n.version='2.0';n.queue=[];}
+w.fbq('init','1782310362686643');
+w.fbq('init','1833853264476817');
+w.fbq('track','PageView');
+var started=false,timer,idle;
+function start(){if(started)return;started=true;clearTimeout(timer);
+if(idle&&w.cancelIdleCallback)w.cancelIdleCallback(idle);
+w.removeEventListener('pointerdown',start);w.removeEventListener('keydown',start);
+var s=d.createElement('script');s.async=true;s.src='https://connect.facebook.net/en_US/fbevents.js';d.head.appendChild(s);}
+w.loadMetaPixels=start;
+w.addEventListener('pointerdown',start,{once:true,passive:true});
+w.addEventListener('keydown',start,{once:true});
+function schedule(){if(started)return;timer=setTimeout(function(){
+if(w.requestIdleCallback)idle=w.requestIdleCallback(start,{timeout:1000});else start();},2000);}
+if(d.readyState==='complete')schedule();else w.addEventListener('load',schedule,{once:true});
+})(window,document);`,
       },
     ],
   }),

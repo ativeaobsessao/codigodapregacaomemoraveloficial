@@ -58,3 +58,8 @@
   &:hover { background: var(--color-cta-hover); transform: scale(1.03); }
 }
 @keyframes pulse-cta { 0%,100% { transform: scale(1) } 50% { transform: scale(1.03) } }
+
+.deferred-section {
+  content-visibility: auto;
+  contain-intrinsic-size: auto 900px;
+}

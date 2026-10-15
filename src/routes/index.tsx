@@ -20,6 +20,7 @@ import eb3 from "@/assets/opt-esboco-preview-03.webp.asset.json";
 import eb5 from "@/assets/opt-esboco-preview-05.webp.asset.json";
 import logoImg from "@/assets/opt-logo-pregacao-dark-final.webp.asset.json";
 import { Carousel, MultiCarousel } from "@/components/Carousel";
+import { ClickToPlayVideo } from "@/components/ClickToPlayVideo";
 
 export const Route = createFileRoute("/")({
   head: () => ({
@@ -33,7 +34,6 @@ export const Route = createFileRoute("/")({
     ],
     links: [
       { rel: "preload", as: "image", href: library, fetchpriority: "high" },
-      { rel: "preload", as: "image", href: poster1.url },
     ],
   }),
   component: Index,
@@ -112,8 +112,9 @@ function Item({ children }: { children: React.ReactNode }) {
 }
 
 function track() {
-  const w = window as unknown as { fbq?: (...a: unknown[]) => void };
+  const w = window as unknown as { fbq?: (...a: unknown[]) => void; loadMetaPixels?: () => void };
   w.fbq?.("track", "InitiateCheckout");
+  w.loadMetaPixels?.();
 }
 
 function Index() {
@@ -145,13 +146,13 @@ function Index() {
           <div id="demonstracao" className="mx-auto flex max-w-[808px] flex-col items-center gap-4 md:flex-row md:items-start md:justify-center md:gap-6">
             <div className="w-full max-w-[380px] space-y-2 text-center">
               <span className="inline-block rounded-full bg-gold px-3 py-1 text-xs font-bold text-primary-foreground">PASSO 1: BIBLIOTECA INTELIGENTE</span>
-              <video src={part1.url} poster={poster1.url} width={720} height={1280} autoPlay loop muted playsInline preload="metadata" className="h-auto w-full rounded-[24px] shadow-2xl border border-white/10" />
+              <ClickToPlayVideo src={part1.url} poster={poster1.url} label="PASSO 1: BIBLIOTECA INTELIGENTE" />
               <p className="text-xs text-muted-foreground">Ache seu tema em segundos</p>
             </div>
             <ArrowDown className="h-8 w-8 shrink-0 animate-bounce text-gold md:mt-48 md:-rotate-90" />
             <div className="w-full max-w-[380px] space-y-2 text-center">
               <span className="inline-block rounded-full bg-gold px-3 py-1 text-xs font-bold text-primary-foreground">PASSO 2: EDITOR MINHAS PALAVRAS</span>
-              <video src={part2.url} poster={poster2.url} width={720} height={1280} autoPlay loop muted playsInline preload="metadata" className="h-auto w-full rounded-[24px] shadow-2xl border border-white/10" />
+              <ClickToPlayVideo src={part2.url} poster={poster2.url} label="PASSO 2: EDITOR MINHAS PALAVRAS" />
               <p className="text-xs text-muted-foreground">Edite com suas palavras - salva sozinho</p>
             </div>
           </div>
@@ -180,7 +181,7 @@ function Index() {
       </section>
 
       {/* ESBOÇOS */}
-      <section id="esbocos-preview" className="space-y-6 px-4 py-12">
+      <section id="esbocos-preview" className="deferred-section space-y-6 px-4 py-12">
         <h2 className="mx-auto max-w-xl text-center font-serif text-2xl font-extrabold text-gold">
           Veja Alguns Esboços que Você Tem Acesso Assim que Adquire!
         </h2>
@@ -199,7 +200,7 @@ function Index() {
       </section>
 
       {/* BENEFÍCIOS */}
-      <section className="bg-card/50 px-4 py-12">
+      <section className="deferred-section bg-card/50 px-4 py-12">
         <div className="mx-auto max-w-2xl space-y-6">
           <h2 className="text-center font-serif text-2xl font-extrabold">
             Acessando hoje a Plataforma Código da Pregação Memorável você recebe:
@@ -216,7 +217,7 @@ function Index() {
       </section>
 
       {/* PROVAS */}
-      <section id="prova-social" className="space-y-6 px-4 py-12">
+      <section id="prova-social" className="deferred-section space-y-6 px-4 py-12">
         <h2 className="mx-auto max-w-xl text-center font-serif text-2xl font-extrabold text-gold">
           QUEM ADQUIRIU ACESSO AO CÓDIGO DA PREGAÇÃO MEMORÁVEL, RECOMENDA!
         </h2>
@@ -277,7 +278,7 @@ function Index() {
       </section>
 
       {/* ANA */}
-      <section id="ana-idealizadora" className="px-4 py-12">
+      <section id="ana-idealizadora" className="deferred-section px-4 py-12">
         <div className="mx-auto flex max-w-4xl flex-col items-center gap-8 md:flex-row md:items-center">
           <img src={fotoAna.url} width={640} height={640} loading="lazy" decoding="async" alt="Ana Tavares" className="h-auto w-60 shrink-0 rounded-full border-[3px] border-gold shadow-2xl md:w-80" />
           <div className="space-y-4 text-center md:text-left">
