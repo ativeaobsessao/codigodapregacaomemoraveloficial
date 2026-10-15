@@ -1,21 +1,24 @@
 import { createFileRoute } from "@tanstack/react-router";
 import { useEffect, useState } from "react";
 import { ArrowDown, Check, ChevronDown, ShieldCheck, Star } from "lucide-react";
-import pdf1 from "@/assets/pdf-pagina-01.png.asset.json";
-import pdf2 from "@/assets/pdf-pagina-02.png.asset.json";
-import pdf3 from "@/assets/pdf-pagina-03.png.asset.json";
-import pdf4 from "@/assets/pdf-pagina-04.png.asset.json";
-import provaSocial from "@/assets/prova-social-combina.png.asset.json";
-import fotoAna from "@/assets/foto-ana.png.asset.json";
-import library from "@/assets/pregadora.jpg";
-import part1 from "@/assets/part01-pv.mp4.asset.json";
-import part2 from "@/assets/part02-pv.mp4.asset.json";
-import printPregacao from "@/assets/print-pregacao.jpeg.asset.json";
-import eb1 from "@/assets/esboco-preview-01.png.asset.json";
-import eb2 from "@/assets/esboco-preview-02.png.asset.json";
-import eb3 from "@/assets/esboco-preview-03.png.asset.json";
-import eb5 from "@/assets/esboco-preview-05.png.asset.json";
-import logoImg from "@/assets/logo-pregacao-dark-final.png.asset.json";
+import pdf1 from "@/assets/opt-pdf-pagina-01.webp.asset.json";
+import pdf2 from "@/assets/opt-pdf-pagina-02.webp.asset.json";
+import pdf3 from "@/assets/opt-pdf-pagina-03.webp.asset.json";
+import pdf4 from "@/assets/opt-pdf-pagina-04.webp.asset.json";
+import provaSocial from "@/assets/opt-prova-social-combina.webp.asset.json";
+import fotoAna from "@/assets/opt-foto-ana.webp.asset.json";
+import libraryAsset from "@/assets/opt-pregadora.webp.asset.json";
+import poster1 from "@/assets/opt-part01-pv-poster.webp.asset.json";
+import poster2 from "@/assets/opt-part02-pv-poster.webp.asset.json";
+const library = libraryAsset.url;
+import part1 from "@/assets/opt-part01-pv.mp4.asset.json";
+import part2 from "@/assets/opt-part02-pv.mp4.asset.json";
+import printPregacao from "@/assets/opt-print-pregacao.webp.asset.json";
+import eb1 from "@/assets/opt-esboco-preview-01.webp.asset.json";
+import eb2 from "@/assets/opt-esboco-preview-02.webp.asset.json";
+import eb3 from "@/assets/opt-esboco-preview-03.webp.asset.json";
+import eb5 from "@/assets/opt-esboco-preview-05.webp.asset.json";
+import logoImg from "@/assets/opt-logo-pregacao-dark-final.webp.asset.json";
 import { Carousel, MultiCarousel } from "@/components/Carousel";
 
 export const Route = createFileRoute("/")({
@@ -122,10 +125,10 @@ function Index() {
 
       {/* HERO */}
       <section className="relative">
-        <img src={library} alt="Mulher pregando no púlpito de uma igreja" width={768} height={1344} className="absolute inset-x-0 top-0 h-[900px] w-full object-cover object-top opacity-60" />
+        <img src={library} alt="Mulher pregando no púlpito de uma igreja" width={768} height={1344} fetchPriority="high" decoding="async" className="absolute inset-x-0 top-0 h-[900px] w-full object-cover object-top opacity-60" />
         <div className="absolute inset-x-0 top-0 h-[900px] bg-gradient-to-b from-background/30 via-background/60 to-background" />
         <div className="relative mx-auto max-w-4xl space-y-6 px-4 pb-12 pt-6">
-          <img src={logoImg.url} alt="Código da Pregação Memorável" className="mx-auto mb-4 mt-8 block h-auto w-full max-w-[220px] object-contain drop-shadow-[0_2px_10px_rgba(0,0,0,0.9)]" />
+          <img src={logoImg.url} width={440} height={127} decoding="async" alt="Código da Pregação Memorável" className="mx-auto mb-4 mt-8 block h-auto w-full max-w-[220px] object-contain drop-shadow-[0_2px_10px_rgba(0,0,0,0.9)]" />
           <h3 className="text-center font-serif text-lg font-semibold leading-snug sm:text-2xl">
             Cria seu esboço autoral em  15 minutos!
           </h3>
@@ -138,13 +141,13 @@ function Index() {
           <div id="demonstracao" className="mx-auto flex max-w-[808px] flex-col items-center gap-4 md:flex-row md:items-start md:justify-center md:gap-6">
             <div className="w-full max-w-[380px] space-y-2 text-center">
               <span className="inline-block rounded-full bg-gold px-3 py-1 text-xs font-bold text-primary-foreground">PASSO 1: BIBLIOTECA INTELIGENTE</span>
-              <video src={part1.url} autoPlay loop muted playsInline preload="auto" className="w-full rounded-[24px] shadow-2xl border border-white/10" />
+              <video src={part1.url} poster={poster1.url} width={720} height={1280} autoPlay loop muted playsInline preload="metadata" className="h-auto w-full rounded-[24px] shadow-2xl border border-white/10" />
               <p className="text-xs text-muted-foreground">Ache seu tema em segundos</p>
             </div>
             <ArrowDown className="h-8 w-8 shrink-0 animate-bounce text-gold md:mt-48 md:-rotate-90" />
             <div className="w-full max-w-[380px] space-y-2 text-center">
               <span className="inline-block rounded-full bg-gold px-3 py-1 text-xs font-bold text-primary-foreground">PASSO 2: EDITOR MINHAS PALAVRAS</span>
-              <video src={part2.url} autoPlay loop muted playsInline preload="auto" className="w-full rounded-[24px] shadow-2xl border border-white/10" />
+              <video src={part2.url} poster={poster2.url} width={720} height={1280} autoPlay loop muted playsInline preload="metadata" className="h-auto w-full rounded-[24px] shadow-2xl border border-white/10" />
               <p className="text-xs text-muted-foreground">Edite com suas palavras - salva sozinho</p>
             </div>
           </div>
@@ -156,7 +159,7 @@ function Index() {
               <Carousel id="carousel-pdf" label="Página do PDF" images={[pdf1.url, pdf2.url, pdf3.url, pdf4.url]} />
               <div className="mx-auto w-full max-w-[260px] rounded-[2.5rem] border-[10px] border-muted bg-background p-1 shadow-2xl">
                 <div className="mx-auto mb-1 h-4 w-24 rounded-full bg-muted" />
-                <img src={printPregacao.url} alt="Esboço enviado no WhatsApp" className="w-full rounded-[1.8rem]" />
+                <img src={printPregacao.url} width={600} height={1301} loading="lazy" decoding="async" alt="Esboço enviado no WhatsApp" className="h-auto w-full rounded-[1.8rem]" />
               </div>
             </div>
             <p className="text-xs text-muted-foreground">Com um clique, você baixa em PDF ou envia para seu WhatsApp</p>
@@ -219,8 +222,11 @@ function Index() {
         <img
           src={provaSocial.url}
           alt="Prints de WhatsApp de alunas do Código da Pregação Memorável"
+          width={800}
+          height={731}
           loading="lazy"
-          className="mx-auto block w-[90vw] max-w-[380px] rounded-2xl border border-white/80 bg-white shadow-xl"
+          decoding="async"
+          className="mx-auto block h-auto w-[90vw] max-w-[380px] rounded-2xl border border-white/80 bg-white shadow-xl"
         />
       </section>
 
@@ -269,7 +275,7 @@ function Index() {
       {/* ANA */}
       <section id="ana-idealizadora" className="px-4 py-12">
         <div className="mx-auto flex max-w-4xl flex-col items-center gap-8 md:flex-row md:items-center">
-          <img src={fotoAna.url} alt="Ana Tavares" className="w-60 shrink-0 rounded-full border-[3px] border-gold shadow-2xl md:w-80" />
+          <img src={fotoAna.url} width={640} height={640} loading="lazy" decoding="async" alt="Ana Tavares" className="h-auto w-60 shrink-0 rounded-full border-[3px] border-gold shadow-2xl md:w-80" />
           <div className="space-y-4 text-center md:text-left">
             <h2 className="font-serif text-2xl font-extrabold text-gold sm:text-3xl">Quem criou o Código da Pregação Memorável?</h2>
             <span className="inline-block rounded-full border border-gold px-3 py-1 text-xs font-bold text-gold">Mãe de 3 | 15+ anos pregando | Contadora</span>
