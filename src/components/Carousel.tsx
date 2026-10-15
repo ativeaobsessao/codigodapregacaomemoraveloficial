@@ -29,7 +29,7 @@ export function Carousel({ id, label = "", count = 4, aspect = "aspect-[3/4]", i
         {Array.from({ length: total }).map((_, i) => (
           <div key={i} className="w-full shrink-0 snap-center px-2">
             {images ? (
-              <img src={images[i]} alt={`${label} ${i + 1}`} loading="lazy" className="w-full rounded-2xl border-2 border-gold/50 bg-card object-contain shadow-2xl" />
+              <img src={images[i]} alt={`${label} ${i + 1}`} width={800} height={1131} loading="lazy" decoding="async" className="h-auto w-full rounded-2xl border-2 border-gold/50 bg-card object-contain shadow-2xl" />
             ) : (
               <div className={`${aspect} flex items-center justify-center rounded-2xl border-2 border-gold/50 bg-placeholder p-4 text-center font-semibold text-muted-foreground`}>
                 {label} {i + 1}
@@ -87,7 +87,7 @@ export function MultiCarousel({ id, label = "", items }: { id: string; label?: s
         {items.map((it, i) => (
           <div key={i} className="w-full shrink-0 snap-center px-2 sm:w-1/2 lg:w-1/3">
             <div className="overflow-hidden rounded-2xl bg-white shadow-xl">
-              <img src={it.src} alt={`${label} ${i + 1}`} loading="lazy" className="aspect-[3/4] w-full object-cover object-top" />
+              <img src={it.src} alt={`${label} ${i + 1}`} width={600} height={800} loading="lazy" decoding="async" className="aspect-[3/4] w-full object-cover object-top" />
               <p className="border-t border-black/5 px-3 py-2 text-center text-[11px] font-bold uppercase tracking-wide text-neutral-700">{it.tema}</p>
             </div>
           </div>
