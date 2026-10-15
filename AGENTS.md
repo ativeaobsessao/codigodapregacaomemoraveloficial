@@ -8,3 +8,4 @@
 > Commits you push to the connected branch sync back to Lovable and show up in
 > the editor, so keep the branch in a working state.
 <!-- LOVABLE:END -->
+- Page media uses compressed opt-*.webp / opt-*.mp4 asset pointers (≤800px WebP, 720p MP4 with poster); new media must be optimized the same way — keeps mobile LCP fast for paid traffic.
