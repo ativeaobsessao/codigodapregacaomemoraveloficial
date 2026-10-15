@@ -9,3 +9,5 @@
 > the editor, so keep the branch in a working state.
 <!-- LOVABLE:END -->
 - Page media uses compressed opt-*.webp / opt-*.mp4 asset pointers (≤800px WebP, 720p MP4 with poster); new media must be optimized the same way — keeps mobile LCP fast for paid traffic.
+- Demonstration media uses ClickToPlayVideo, mounting the video source only after a play click — prevents unsolicited MP4 downloads.
+- The root head queues pixel events once and defers the shared SDK; checkout flushes the queue before navigation — preserves both pixel destinations without blocking initial rendering.
