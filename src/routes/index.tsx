@@ -60,13 +60,13 @@ const faq = [
   ["O que é o Editor Minhas Palavras?", "É o seu caderninho pessoal dentro da plataforma. Ele pega um esboço pronto da plataforma e transforma na sua mensagem, com as suas palavras, com as suas histórias da cozinha, da família, do seu dia a dia. É o que faz a pregação ser sua de verdade, do seu jeito de falar. Tudo que você escreve salva sozinho. Se fechar e voltar amanhã, continua tudo lá."],
   ["O que é o Template para uma Pregação Memorável?", "É um processo validado com 12 passos, usado todos os dias por pregadores super experientes. Ele nasceu para resolver a maior dor: pregar e ver a plateia voando, desanimada, no modo automático. Esse template te guia para criar uma mensagem que prende a atenção, que engaja e faz a irmã se sentir representada, sentindo que a mensagem tocou no coração dela. Tudo com começo, meio e fim bem amarrados e com segurança bíblica."],
   ["O que é a Biblioteca Inteligente?", "Biblioteca é onde ficam todos os esboços guardados. A Biblioteca Inteligente é essa biblioteca organizada por temas para facilitar a sua vida. Ela funciona como o Google da pregação. Você não precisa mais folhear 500 PDFs soltos e frios feitos por homem para homem. Lá você encontra em segundos centenas de esboços separados pelos temas que você mais prega: Ansiedade, Medo, Oração, Mulheres da Bíblia e outros."],
-  ["Quais são as formas de pagamento?", "Você paga com Pix ou Cartão de Crédito, em assinatura mensal. Checkout 100% seguro. Assim que o pagamento é aprovado, o acesso já é liberado. E é super fácil de cancelar, sem pegadinha."],
-  ["O acesso à plataforma é vitalício mesmo?", "Enquanto a assinatura estiver ativada, você tem acesso a toda a plataforma. Agora, os arquivos do Google Drive são seus para sempre, mesmo se você cancelar a assinatura. É uma assinatura recorrente mensal. Para cancelar, basta enviar mensagem no WhatsApp ou no e-mail. Na Área de membros você encontra todas as informações."],
+  ["Quais são as formas de pagamento?", "Você paga com Pix ou Cartão de Crédito, em pagamento único. Checkout 100% seguro. Assim que o pagamento é aprovado, o acesso já é liberado. Sem mensalidade, sem pegadinha."],
+  ["O acesso à plataforma é vitalício mesmo?", "Sim. Você paga uma vez e o acesso é seu pra sempre. Sem mensalidade. Todas as atualizações de esboços que as 22+ validadoras ajudarem a melhorar entram pra você sem custo extra."],
   ["Como e quando eu recebo o acesso? É imediato?", "É imediato. Assim que o pagamento cai, você recebe no seu e-mail e no seu WhatsApp o link de acesso à plataforma Código da Pregação Memorável + o link da pasta no Google Drive organizada por temáticas. É só clicar e entrar."],
   ["Funciona no celular? Eu não sei mexer muito com tecnologia...", "Foi feita justamente pra você, irmã. Plataforma minimalista e super intuitiva, pensada pra pessoas que não tem familiaridade com tecnologia. Não precisa instalar nada. Entra com seu celular mesmo: digita a temática, clica no esboço, clica no botão preto Quero usar com minhas palavras. Tudo salva sozinho. Se fechar e voltar depois, tá lá."],
   ["Posso imprimir e levar pro púlpito? Preciso de internet na hora?", "Pode e deve. Depois de personalizar com suas palavras, você baixa em PDF Premium e leva no papel, ou envia a versão completa pro seu próprio WhatsApp pra consultar na hora da pregação."],
   ["Eu já tenho muitos PDFs de esboços. Qual a diferença?", "PDF é frio, genérico e quase sempre é feito por homem pra homem. Aqui temos uma Biblioteca Inteligente + Editor Minhas Palavras. Você não folheia 500 arquivos. Você busca pela temática da sua pregação, como: [Ansiedade, Medo, Oração, Mulheres da Bíblia] e ainda transforma o esboço na sua mensagem, com o Gancho da sua rotina e com o Espelho Bíblico que te protege de pregar heresia. É sua mensagem, não cópia."],
-  ["Qual a diferença entre o Plano Básico e o Plano Premium? Qual devo escolher?", "Essa é simples, irmã: O Plano Básico de R$19,90/mês já é completo pra você nunca mais travar. Você recebe a plataforma toda: Biblioteca Inteligente com 100 esboços editáveis no Template de 12 passos, Editor Minhas Palavras pra editar do seu jeito, download em PDF ou envio no WhatsApp e a pasta no Google Drive organizada por 6 temáticas: Ansiedade, Medo, Coragem, Fé, Perseverança e Perdão. Essa pasta é sua para sempre, mesmo se cancelar. O Plano Premium de R$29,90/mês é o MAIS VENDIDO porque é a biblioteca completa. É tudo do Básico + 200 esboços exclusivos em 5 temáticas extras: Mulheres da Bíblia, Cura, Família, Oração e Presença, totalizando 300 esboços editáveis. E ainda leva o Bônus Planner da Pregadora pra organizar as pregações do mês em poucos minutos. Se você foi chamada de última hora e precisa resolver amanhã, o Básico já te salva. Se você prega toda semana ou quer ser lembrada como referência na sua comunidade, vai de Premium. São só R$10 a mais por mês e você fica com a biblioteca completa, em uma assinatura mensal que você cancela quando quiser."],
+  ["Qual a diferença entre o Plano Básico e o Plano Premium? Qual devo escolher?", "Essa é simples, irmã: O Plano Básico de R$19,90 já é completo pra você nunca mais travar. Você recebe a plataforma toda: Biblioteca Inteligente com 100 esboços editáveis no Template de 12 passos, Editor Minhas Palavras pra editar do seu jeito, download em PDF ou envio no WhatsApp e a pasta no Google Drive organizada por 6 temáticas: Ansiedade, Medo, Coragem, Fé, Perseverança e Perdão. Essa pasta é sua para sempre. O Plano Premium de R$29,90 é o MAIS VENDIDO porque é a biblioteca completa. É tudo do Básico + 200 esboços exclusivos em 5 temáticas extras: Mulheres da Bíblia, Cura, Família, Oração e Presença, totalizando 300 esboços editáveis. E ainda leva o Bônus Planner da Pregadora pra organizar as pregações do mês em poucos minutos. Se você foi chamada de última hora e precisa resolver amanhã, o Básico já te salva. Se você prega toda semana ou quer ser lembrada como referência na sua comunidade, vai de Premium. São só R$10 a mais e você fica com a biblioteca completa e vitalícia, em pagamento único."],
   ["E se eu não gostar? Tem garantia?", "Tem sim. Risco zero. Você tem 7 dias de garantia incondicional. Se por qualquer motivo achar que não é pra você, nos chama no WhatsApp que devolvemos 100% do seu valor. Sem perguntas, sem constrangimento."],
 ];
 
@@ -294,8 +294,8 @@ function Index() {
               <p className="font-serif text-4xl font-extrabold leading-tight text-gold">100 esboços editáveis</p>
               <p className="text-sm text-muted-foreground">nas temáticas mais pregadas</p>
               <p className="text-sm"><s className="text-muted-foreground">De R$97</s> por apenas</p>
-              <p className="font-serif text-4xl font-extrabold">R$19,90 <span className="text-lg">/mês</span></p>
-              <p className="text-xs text-muted-foreground">Assinatura mensal • Cancele quando quiser</p>
+              <p className="font-serif text-4xl font-extrabold">R$19,90</p>
+              <p className="text-xs text-muted-foreground">Pagamento único • Acesso vitalício</p>
               <button type="button" onClick={() => setUpsell(true)} className="block w-full rounded-full border-2 border-gold py-3 font-bold text-gold hover:bg-gold hover:text-primary-foreground">QUERO O PLANO BÁSICO</button>
               <ul className="space-y-2 text-left">
                 <Item>100 esboços editáveis no Template de 12 passos</Item>
@@ -303,7 +303,7 @@ function Index() {
                 <Item>Biblioteca Inteligente: ache o esboço pelo tema</Item>
                 <Item>Editor Minhas Palavras: edite do seu jeito</Item>
                 <Item>Baixe em PDF ou envie no WhatsApp</Item>
-                <Item>Pasta no Google Drive organizada por temática, vitalícia: é sua para sempre, mesmo se cancelar a assinatura</Item>
+                <Item>Pasta no Google Drive organizada por temática</Item>
               </ul>
             </div>
             <div className="relative space-y-4 rounded-2xl border-2 border-banner bg-card p-6 pt-8 text-center shadow-[0_0_40px_-10px_var(--banner)]">
@@ -312,9 +312,9 @@ function Index() {
               <p className="font-serif text-4xl font-extrabold leading-tight text-cta-hover">300 esboços editáveis</p>
               <p className="text-sm text-muted-foreground">100 do Básico + 200 exclusivos = 300</p>
               <p className="text-sm"><s className="text-muted-foreground">De R$197</s> por apenas</p>
-              <p className="font-serif text-4xl font-extrabold">R$29,90 <span className="text-lg">/mês</span></p>
-              <p className="text-xs text-muted-foreground">Assinatura mensal • Cancele quando quiser</p>
-              <a href="https://pay.kiwify.com.br/UcoK0n6" target="_blank" rel="noopener" onClick={track} className="btn-cta">QUERO O PLANO PREMIUM</a>
+              <p className="font-serif text-4xl font-extrabold">R$29,90</p>
+              <p className="text-xs text-muted-foreground">Pagamento único • Acesso vitalício</p>
+              <a href="https://pay.kiwify.com.br/kHeSsDE" target="_blank" rel="noopener" onClick={track} className="btn-cta">QUERO O PLANO PREMIUM</a>
               <ul className="space-y-2 text-left">
                 <Item>Tudo do Básico: 100 esboços nas 6 temáticas</Item>
                 <Item>+200 esboços exclusivos em 5 temáticas extras: <span className="mt-1 flex flex-wrap gap-1">{["Mulheres da Bíblia", "Cura", "Família", "Oração", "Presença"].map((t) => <span key={t} className="rounded-full bg-gold px-2 py-0.5 text-xs font-semibold text-primary-foreground">{t}</span>)}</span></Item>
@@ -392,10 +392,10 @@ function Index() {
           <div onClick={(e) => e.stopPropagation()} className="relative w-full max-w-[400px] space-y-4 rounded-2xl border border-gold/40 bg-card p-6 text-center shadow-2xl">
             <button type="button" aria-label="Fechar" onClick={() => setUpsell(false)} className="absolute right-3 top-2 text-2xl leading-none opacity-60 hover:opacity-100">×</button>
             <h3 className="font-serif text-2xl font-extrabold">Espera! Leve o PREMIUM com desconto hoje?</h3>
-            <p className="text-sm text-muted-foreground">Você ia levar 100 esboços por R$19,90. Leve 300 esboços + Bônus Planner da Pregadora por apenas R$24,90/mês.</p>
-            <p className="text-lg font-extrabold">De <s className="text-muted-foreground">R$29,90</s> por <span className="text-cta-hover">R$24,90/mês</span></p>
-            <a href="https://pay.kiwify.com.br/iFLLrIG" onClick={track} className="btn-cta">SIM, QUERO O PREMIUM POR R$24,90</a>
-            <a href="https://pay.kiwify.com.br/d9PSFOK" onClick={track} className="block text-xs underline opacity-70 hover:opacity-100">Não, quero só o Básico mesmo</a>
+            <p className="text-sm text-muted-foreground">Você ia levar 100 esboços por R$19,90. Leve 300 esboços + Bônus Planner da Pregadora por apenas R$24,90.</p>
+            <p className="text-lg font-extrabold">De <s className="text-muted-foreground">R$29,90</s> por <span className="text-cta-hover">R$24,90</span></p>
+            <a href="https://pay.kiwify.com.br/ij8ko5m" onClick={track} className="btn-cta">SIM, QUERO O PREMIUM POR R$24,90</a>
+            <a href="https://pay.kiwify.com.br/lFq1Ab9" onClick={track} className="block text-xs underline opacity-70 hover:opacity-100">Não, quero só o Básico mesmo</a>
           </div>
         </div>
       )}
