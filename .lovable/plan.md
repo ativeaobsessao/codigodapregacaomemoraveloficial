@@ -16,8 +16,6 @@ Nenhuma outra parte da página (planos, pop-up, topo, rodapé) tem esses termos.
 2. **O acesso é vitalício mesmo?** (a pergunta continua igual)
    "Enquanto a assinatura estiver ativada, você tem acesso a toda a plataforma. Agora, os arquivo do Google Drive são seus para sempre. É uma assinatura recorrente mensal. Para cancelar, basta enviar mensagem no WhatsApp ou no e-mail. Na Área de membros você encontra todas as informações."
    (Junta o texto que você mandou com o aviso de cancelamento que você também pediu.)
-3. **Diferença entre os planos:** o texto todo fica igual, só o final muda para:
-   "São só R$10 a mais e você fica com a biblioteca completa, em uma assinatura mensal."
-
-## Observação
-A resposta 3 ainda cita temas e bônus antigos que não batem com os cards novos dos planos. Não vou mexer nisso, porque não foi pedido.
+3. **Diferença entre os planos:** reescrita para ficar igual aos cards dos planos e sem "vitalícia":
+   "Essa é simples, irmã: O Plano Básico de R$19,90/mês já é completo pra você nunca mais travar. Você recebe a plataforma toda: Biblioteca Inteligente com 100 esboços editáveis no Template de 12 passos, Editor Minhas Palavras pra editar do seu jeito, download em PDF ou envio no WhatsApp e a pasta no Google Drive organizada por 6 temáticas: Ansiedade, Medo, Coragem, Fé, Perseverança e Perdão. O Plano Premium de R$29,90/mês é o MAIS VENDIDO porque é a biblioteca completa. É tudo do Básico + 200 esboços exclusivos em 5 temáticas extras: Mulheres da Bíblia, Cura, Família, Oração e Presença, totalizando 300 esboços editáveis. E ainda leva o Bônus Planner da Pregadora pra organizar as pregações do mês em poucos minutos. Se você foi chamada de última hora e precisa resolver amanhã, o Básico já te salva. Se você prega toda semana ou quer ser lembrada como referência na sua comunidade, vai de Premium. São só R$10 a mais por mês e você fica com a biblioteca completa, em uma assinatura mensal que você cancela quando quiser."
+   - Sai o "Checklist da Pregação Segura", porque o card Premium só mostra o Planner como bônus.
