@@ -291,30 +291,35 @@ function Index() {
           <div className="grid gap-8 md:grid-cols-2 md:items-start">
             <div className="space-y-4 rounded-2xl border bg-card p-6 text-center">
               <h3 className="font-serif text-2xl font-extrabold">PLANO BÁSICO</h3>
-              <p className="text-sm">De <s className="text-muted-foreground">R$97</s> por apenas</p>
-              <p className="font-serif text-4xl font-extrabold text-gold">R$19,90</p>
-              <p className="text-xs text-muted-foreground">Pagamento Único - Acesso Imediato e vitalício</p>
+              <p className="font-serif text-4xl font-extrabold leading-tight text-gold">100 esboços editáveis</p>
+              <p className="text-sm text-muted-foreground">nas temáticas mais pregadas</p>
+              <p className="text-sm"><s className="text-muted-foreground">De R$97</s> por apenas</p>
+              <p className="font-serif text-4xl font-extrabold">R$19,90 <span className="text-lg">/mês</span></p>
+              <p className="text-xs text-muted-foreground">Assinatura mensal • Cancele quando quiser</p>
               <button type="button" onClick={() => setUpsell(true)} className="block w-full rounded-full border-2 border-gold py-3 font-bold text-gold hover:bg-gold hover:text-primary-foreground">QUERO O PLANO BÁSICO</button>
               <ul className="space-y-2 text-left">
-                <Item>Template para uma pregação memorável</Item>
-                <Item>Biblioteca Inteligente</Item>
-                <Item>Editor Minhas Palavras</Item>
-                <Item>Baixe em PDF ou compartilhe no WhatsApp</Item>
-                <Item>100 Esboços Editáveis</Item>
-                <Item>Pasta Google Drive organizadas por temáticas: Ansiedade/Medo/Coragem, Oração/Presença, Espera/Fé/Perseverança, Mulheres da Bíblia, Cura/Restauração, Família/Perdão</Item>
+                <Item>100 esboços editáveis no Template de 12 passos</Item>
+                <Item>6 temáticas: <span className="mt-1 flex flex-wrap gap-1">{["Ansiedade", "Medo", "Coragem", "Fé", "Perseverança", "Perdão"].map((t) => <span key={t} className="rounded-full border border-gold/50 px-2 py-0.5 text-xs">{t}</span>)}</span></Item>
+                <Item>Biblioteca Inteligente: ache o esboço pelo tema</Item>
+                <Item>Editor Minhas Palavras: edite do seu jeito</Item>
+                <Item>Baixe em PDF ou envie no WhatsApp</Item>
+                <Item>Pasta no Google Drive organizada por temática</Item>
               </ul>
             </div>
             <div className="relative space-y-4 rounded-2xl border-2 border-banner bg-card p-6 pt-8 text-center shadow-[0_0_40px_-10px_var(--banner)]">
               <span className="absolute -top-4 left-1/2 -translate-x-1/2 rounded-full bg-banner px-4 py-1 text-xs font-extrabold text-banner-foreground">MAIS VENDIDO</span>
               <h3 className="font-serif text-2xl font-extrabold">PLANO PREMIUM</h3>
-              <p className="text-sm">De <s className="text-muted-foreground">R$197</s> por apenas</p>
-              <p className="font-serif text-5xl font-extrabold text-cta-hover">R$29,90</p>
-              <p className="text-xs text-muted-foreground">Acesso Vitalício - Pagamento Único</p>
-              <a href="https://pay.kiwify.com.br/ZKBUdYI" onClick={track} className="btn-cta">QUERO O PLANO PREMIUM</a>
+              <p className="font-serif text-4xl font-extrabold leading-tight text-cta-hover">300 esboços editáveis</p>
+              <p className="text-sm text-muted-foreground">100 do Básico + 200 exclusivos = 300</p>
+              <p className="text-sm"><s className="text-muted-foreground">De R$197</s> por apenas</p>
+              <p className="font-serif text-4xl font-extrabold">R$29,90 <span className="text-lg">/mês</span></p>
+              <p className="text-xs text-muted-foreground">Assinatura mensal • Cancele quando quiser</p>
+              <a href="https://pay.kiwify.com.br/UcoK0n6" target="_blank" rel="noopener" onClick={track} className="btn-cta">QUERO O PLANO PREMIUM</a>
               <ul className="space-y-2 text-left">
-                <Item>Tudo do Básico</Item>
-                <Item>Biblioteca Completa com 300 esboços editáveis: FÉ E AVIVAMENTO, ESPÍRITO SANTO, PALAVRA, GRAÇA, ESPERANÇA</Item>
-                <Item><strong className="text-banner">BÔNUS:</strong> Planner da Pregadora - organize suas pregações do mês em poucos minutos</Item>
+                <Item>Tudo do Básico: 100 esboços nas 6 temáticas</Item>
+                <Item>+200 esboços exclusivos em 5 temáticas extras: <span className="mt-1 flex flex-wrap gap-1">{["Mulheres da Bíblia", "Cura", "Família", "Oração", "Presença"].map((t) => <span key={t} className="rounded-full bg-gold px-2 py-0.5 text-xs font-semibold text-primary-foreground">{t}</span>)}</span></Item>
+                <Item>Total: 300 esboços editáveis, todos no Template de 12 passos</Item>
+                <Item><strong className="text-banner">BÔNUS:</strong> Planner da Pregadora: organize as pregações do mês em poucos minutos</Item>
               </ul>
               <div className="space-y-1 border-t pt-4 text-xs text-muted-foreground">
                 <p className="flex items-center justify-center gap-1"><ShieldCheck className="h-4 w-4 text-gold" />Risco zero: 7 dias de garantia incondicional</p>
@@ -384,12 +389,13 @@ function Index() {
 
       {upsell && (
         <div onClick={() => setUpsell(false)} className="fixed inset-0 z-50 flex items-center justify-center bg-background/70 p-4 backdrop-blur-sm">
-          <div onClick={(e) => e.stopPropagation()} className="relative w-full max-w-[400px] space-y-4 rounded-2xl bg-foreground p-6 text-center text-background shadow-2xl">
+          <div onClick={(e) => e.stopPropagation()} className="relative w-full max-w-[400px] space-y-4 rounded-2xl border border-gold/40 bg-card p-6 text-center shadow-2xl">
             <button type="button" aria-label="Fechar" onClick={() => setUpsell(false)} className="absolute right-3 top-2 text-2xl leading-none opacity-60 hover:opacity-100">×</button>
-            <h3 className="font-serif text-2xl font-extrabold">Espere! Leve o Premium por apenas R$ 24,90</h3>
-            <p className="text-sm opacity-80">Por apenas R$5 a mais você leva TODOS os esboços premium + bônus exclusivos</p>
-            <a href="https://pay.kiwify.com.br/Xih46up" onClick={track} className="btn-cta animate-pulse">QUERO APROVEITAR O DESCONTO E LEVAR O PREMIUM</a>
-            <a href="https://pay.kiwify.com.br/rxxtXTe" onClick={track} className="block text-xs underline opacity-60 hover:opacity-90">Não, quero apenas o Plano Básico mesmo</a>
+            <h3 className="font-serif text-2xl font-extrabold">Espera! Leve o PREMIUM com desconto hoje?</h3>
+            <p className="text-sm text-muted-foreground">Você ia levar 100 esboços por R$19,90. Leve 300 esboços + Bônus Planner da Pregadora por apenas R$24,90/mês.</p>
+            <p className="text-lg font-extrabold">De <s className="text-muted-foreground">R$29,90</s> por <span className="text-cta-hover">R$24,90/mês</span></p>
+            <a href="https://pay.kiwify.com.br/iFLLrIG" onClick={track} className="btn-cta">SIM, QUERO O PREMIUM POR R$24,90</a>
+            <a href="https://pay.kiwify.com.br/d9PSFOK" onClick={track} className="block text-xs underline opacity-70 hover:opacity-100">Não, quero só o Básico mesmo</a>
           </div>
         </div>
       )}
