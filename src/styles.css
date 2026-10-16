@@ -63,3 +63,15 @@
   content-visibility: auto;
   contain-intrinsic-size: auto 900px;
 }
+
+/* Hero mockup: width follows screen height so the CTA stays above the fold. --pm-reserve = banner + texts + button. */
+.pm-stage { --pm-reserve: 275px; container-type: inline-size; position: relative; width: 100%;
+  max-width: min(440px, max(250px, calc((100vh - var(--pm-reserve)) / 1.04)));
+  max-width: min(440px, max(250px, calc((100svh - var(--pm-reserve)) / 1.04))); aspect-ratio: 1 / 1.04; }
+.pm-glow { position: absolute; inset: 4% 0 6%; background: radial-gradient(closest-side, color-mix(in srgb, var(--gold) 34%, transparent), transparent 74%); }
+.pm-sheet { position: absolute; right: 0; top: 8cqw; width: 67cqw; transform: rotate(3.5deg); border-radius: 2cqw; overflow: hidden;
+  box-shadow: 0 3cqw 8cqw rgba(0,0,0,.5); -webkit-mask-image: linear-gradient(#000 78%, transparent); mask-image: linear-gradient(#000 78%, transparent); }
+.pm-sheet img, .pm-phone img { display: block; width: 100%; height: auto; }
+.pm-phone { position: absolute; left: 0; top: 0; z-index: 2; width: 45cqw; background: #0a0a0c; border-radius: 6.8cqw; padding: 1.4cqw;
+  box-shadow: 0 4cqw 10cqw rgba(0,0,0,.6), 0 0 0 .35cqw #3a3a40; }
+.pm-phone img { border-radius: 5.5cqw; }

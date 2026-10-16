@@ -18,7 +18,8 @@ import eb1 from "@/assets/opt-esboco-preview-01.webp.asset.json";
 import eb2 from "@/assets/opt-esboco-preview-02.webp.asset.json";
 import eb3 from "@/assets/opt-esboco-preview-03.webp.asset.json";
 import eb5 from "@/assets/opt-esboco-preview-05.webp.asset.json";
-import logoImg from "@/assets/opt-logo-pregacao-dark-final.webp.asset.json";
+import mockTela from "@/assets/opt-mockup-tela.webp.asset.json";
+import mockEsboco from "@/assets/opt-mockup-esboco.webp.asset.json";
 import { Carousel, MultiCarousel } from "@/components/Carousel";
 import { ClickToPlayVideo } from "@/components/ClickToPlayVideo";
 
@@ -128,20 +129,40 @@ function Index() {
         Oferta de Lançamento da Plataforma - Válida até hoje, {today}
       </div>
 
-      {/* HERO */}
-      <section className="relative">
-        <img src={library} alt="Mulher pregando no púlpito de uma igreja" width={768} height={1344} fetchPriority="high" decoding="async" className="absolute inset-x-0 top-0 h-[900px] w-full object-cover object-top opacity-60" />
-        <div className="absolute inset-x-0 top-0 h-[900px] bg-gradient-to-b from-background/30 via-background/60 to-background" />
-        <div className="relative mx-auto max-w-4xl space-y-6 px-4 pb-12 pt-6">
-          <img src={logoImg.url} width={440} height={127} decoding="async" alt="Código da Pregação Memorável" className="mx-auto mb-4 mt-8 block h-auto w-full max-w-[220px] object-contain drop-shadow-[0_2px_10px_rgba(0,0,0,0.9)]" />
-          <h3 className="text-center font-serif text-lg font-semibold leading-snug sm:text-2xl">
-            Cria seu esboço autoral em  15 minutos!
-          </h3>
-          <h1 className="text-center font-serif text-2xl font-extrabold leading-tight sm:text-4xl">
-            Essa é a melhor forma para você realizar a sua pregação de forma segura e confiante🙏
+      {/* PRIMEIRA ABA */}
+      <section className="relative overflow-hidden" aria-label="Prévia da plataforma">
+        <img src={library} alt="Mulher pregando no púlpito de uma igreja" width={768} height={1344} fetchPriority="high" decoding="async" className="absolute inset-0 h-full w-full object-cover object-top opacity-60" />
+        <div className="absolute inset-0 bg-gradient-to-b from-background/30 via-background/60 to-background" />
+        <div className="relative flex flex-col items-center px-4 pb-2 pt-2.5 font-serif">
+          <h1 className="mb-1.5 max-w-[440px] text-center text-[clamp(22px,6.2vw,29px)] font-bold leading-[1.16]">
+            Foi chamada pra pregar e não sabe por onde começar?
           </h1>
-          <h3 className="text-center font-serif text-lg font-semibold italic leading-snug sm:text-2xl">
-            Veja como é simples construir uma mensagem edificante e memorável 👇
+          <h3 className="mb-2.5 max-w-[400px] text-center text-[clamp(14px,3.9vw,16px)] italic leading-[1.35] text-muted-foreground">
+            Monte seu esboço em 15 minutos e suba no púlpito com segurança.
+          </h3>
+          <div className="pm-stage">
+            <div className="pm-glow" />
+            <div className="pm-sheet"><img src={mockEsboco.url} alt="Esboço de pregação em PDF, exatamente como você recebe" width={800} height={953} loading="eager" decoding="async" /></div>
+            <div className="pm-phone"><img src={mockTela.url} alt="Tela da plataforma: Qual temática você vai pregar?" width={738} height={1416} loading="eager" decoding="async" /></div>
+          </div>
+          <a href="#planos" className="btn-cta mt-3 min-h-14 max-w-[440px] font-sans text-[15px]">QUERO ACESSAR A PLATAFORMA</a>
+          <p className="mt-2 text-center font-sans text-xs text-muted-foreground">⭐ +22 mulheres já pregando + 4,9 de satisfação + Compra 100% segura + Garantia 7 dias</p>
+          <div className="mb-2 mt-4 flex max-w-[440px] flex-wrap justify-center gap-2 font-sans">
+            {["+100 esboços editáveis", "Edite com suas palavras", "PDF ou WhatsApp"].map((b) => (
+              <span key={b} className="rounded-full border border-gold/65 bg-gold/10 px-3 py-2 text-[13px] font-semibold leading-none text-gold">{b}</span>
+            ))}
+          </div>
+        </div>
+      </section>
+
+      {/* SEGUNDA ABA */}
+      <section className="bg-background">
+        <div className="mx-auto max-w-4xl space-y-6 px-4 pb-12 pt-10">
+          <h2 className="text-center font-serif text-2xl font-extrabold leading-tight sm:text-3xl">
+            É assim que o seu esboço fica pronto em 15 minutos, sem começar do zero.
+          </h2>
+          <h3 className="text-center font-serif text-base italic leading-snug text-muted-foreground sm:text-xl">
+            3 passos, direto do celular. Sem folhear PDFs e sem página em branco.
           </h3>
           <div id="demonstracao" className="mx-auto flex max-w-[808px] flex-col items-center gap-4 md:flex-row md:items-start md:justify-center md:gap-6">
             <div className="w-full max-w-[380px] space-y-2 text-center">
@@ -171,11 +192,6 @@ function Index() {
           </div>
           <p className="text-center font-serif text-lg italic text-gold">
             "Depois que comecei a usar o Código, toda vez que prego, escuto que lembraram da minha pregação a semana toda" - Relato de alunas
-          </p>
-          <CTA>QUERO MEU ACESSO À PLATAFORMA</CTA>
-          <p className="flex flex-wrap items-center justify-center gap-x-1 text-center text-xs text-muted-foreground">
-            <Star className="h-3 w-3 fill-banner text-banner" />
-            +22 mulheres já pregando + 4,9 de satisfação + Compra 100% segura + Garantia 7 dias
           </p>
         </div>
       </section>
