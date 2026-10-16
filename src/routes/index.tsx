@@ -215,6 +215,38 @@ function Index() {
         <CTA>QUERO MEU ACESSO À PLATAFORMA</CTA>
       </section>
 
+      {/* TEMPLATE */}
+      <section id="template" aria-labelledby="tp-h" className="deferred-section flex flex-col items-center px-4 pb-9 pt-11 font-serif text-foreground">
+        <h2 id="tp-h" className="mb-2.5 max-w-[440px] text-center text-[clamp(23px,6.4vw,30px)] font-bold leading-[1.18]">Quer ouvir depois do culto: “Irmã, que pregação!”?</h2>
+        <p className="mb-[22px] max-w-[420px] text-center text-[clamp(14px,3.9vw,16px)] italic leading-[1.4] text-muted-foreground">Cada esboço já vem dentro do Template de 12 passos: a estrutura que faz a Palavra ficar na memória de quem ouve.</p>
+        <ul className="flex w-full max-w-[440px] flex-col gap-3">
+          {([
+            ["A forma mais fácil de achar o esboço certo:", " escolha o tema (ansiedade, medo, coragem...) e a Biblioteca Inteligente entrega na hora. Sem folhear PDF."],
+            ["⚠️ Cuidado:", " pule um dos 12 passos e a mensagem perde força. O Template te leva do Gancho da Rotina até a Frase Final que Cola, sem deixar nada de fora."],
+            ["O “Gancho da Rotina”:", " a abertura que faz cada irmã pensar “é de mim que ela está falando” já na primeira frase."],
+            ["Os 3 pontos “Dor → Deus → Resposta”:", " a ordem que leva a irmã de “eu me sinto assim” até “sei o que fazer amanhã”."],
+            ["Por que a pregação fica na memória a semana toda:", " a “Frase Final que Cola”, uma frase curta feita para as irmãs levarem para casa."],
+            ["100% editável:", " troque palavras, tire trechos, ponha a sua história. A estrutura é validada; a voz continua sendo SUA."],
+            ["Com um clique,", " você baixa em PDF ou envia para o seu WhatsApp, pronto para levar ao púlpito."],
+          ] as const).map(([b, t]) => (
+            <li key={b} className="relative rounded-[14px] border border-gold/30 bg-foreground/[0.04] py-3.5 pl-[46px] pr-3.5 font-sans text-[15px] leading-[1.45] text-muted-foreground">
+              <span aria-hidden className="absolute left-3.5 top-[13px] h-[22px] w-[22px] rounded-full bg-gold text-center text-[13px] font-extrabold leading-[22px] text-primary-foreground">✓</span>
+              <b className="font-bold text-foreground">{b}</b>{t}
+            </li>
+          ))}
+        </ul>
+        <h3 className="mb-3 mt-7 max-w-[440px] text-center text-[clamp(17px,4.8vw,20px)] font-semibold leading-tight">Os 12 passos que já vêm em cada esboço</h3>
+        <ol className="grid w-full max-w-[440px] grid-cols-2 gap-2">
+          {[["01","Tema"],["07","Desenvolvimento em 3 Pontos"],["02","Objetivo"],["08","Aplicação para Mulheres"],["03","Gancho da Rotina"],["09","Pergunta de Reflexão"],["04","Espelho Bíblico"],["10","Frase Final que Cola"],["05","Versículo-chave"],["11","Oração Sugerida"],["06","Contexto Bíblico Essencial"],["12","Tempo Estimado"]].map(([n, t]) => (
+            <li key={n} className="flex min-h-[46px] items-center gap-2 rounded-[10px] border border-gold/40 bg-background px-2.5 py-2 font-sans text-[12.5px] font-semibold leading-tight text-foreground">
+              <span className="flex-none text-xs font-bold text-gold">{n}</span>{t}
+            </li>
+          ))}
+        </ol>
+        <p className="mb-[18px] mt-[26px] max-w-[440px] border-y border-gold/50 px-3.5 py-4 text-center text-[clamp(18px,5.2vw,22px)] font-semibold italic leading-[1.3] text-gold">Você traz a sua voz. O Template traz a estrutura que faz as irmãs lembrarem.</p>
+        <a href="#planos" className="btn-cta min-h-14 max-w-[440px] animate-none font-sans text-[15px]">QUERO USAR O TEMPLATE</a>
+      </section>
+
       {/* BENEFÍCIOS */}
       <section className="deferred-section bg-card/50 px-4 py-12">
         <div className="mx-auto max-w-2xl space-y-6">
