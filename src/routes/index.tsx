@@ -1,6 +1,6 @@
 import { createFileRoute } from "@tanstack/react-router";
 import { useEffect, useState } from "react";
-import { ArrowDown, Check, ChevronDown, ShieldCheck, Star } from "lucide-react";
+import { ArrowDown, Check, ChevronDown, ShieldCheck } from "lucide-react";
 import pdf1 from "@/assets/opt-pdf-pagina-01.webp.asset.json";
 import pdf2 from "@/assets/opt-pdf-pagina-02.webp.asset.json";
 import pdf3 from "@/assets/opt-pdf-pagina-03.webp.asset.json";
