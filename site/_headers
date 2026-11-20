@@ -1,0 +1,22 @@
+# Cloudflare Pages: cabeçalhos de cache e segurança (arquivo lido automaticamente no deploy).
+# Mídia e fontes: 30 dias. Se trocar um arquivo de media/, MUDE O NOME dele (ex.: opt-vsl-v2.mp4) para não ficar em cache velho.
+
+/*
+  X-Content-Type-Options: nosniff
+  Referrer-Policy: strict-origin-when-cross-origin
+  Permissions-Policy: camera=(), microphone=(), geolocation=()
+
+/assets/fonts/*
+  Cache-Control: public, max-age=31536000, immutable
+
+/media/*
+  Cache-Control: public, max-age=2592000
+
+/assets/css/*
+  Cache-Control: public, max-age=600
+
+/assets/js/*
+  Cache-Control: public, max-age=600
+
+/favicon.png
+  Cache-Control: public, max-age=86400

@@ -1,0 +1,13 @@
+{
+  "name": "codigo-da-pregacao-memoravel-site",
+  "private": true,
+  "description": "Página de vendas estática (HTML + CSS + JS) para hospedar na Cloudflare Pages",
+  "scripts": {
+    "build:css": "tailwindcss -i assets/css/input.css -o assets/css/styles.css --minify",
+    "watch:css": "tailwindcss -i assets/css/input.css -o assets/css/styles.css --watch"
+  },
+  "devDependencies": {
+    "@tailwindcss/cli": "^4.2.1",
+    "tailwindcss": "^4.2.1"
+  }
+}

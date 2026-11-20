@@ -1,0 +1,93 @@
+/* Fonte do CSS (Tailwind v4). O arquivo que o site usa é assets/css/styles.css, gerado por:  npm run build:css */
+@import "tailwindcss" source(none);
+@source "../../index.html";
+@source "../js/main.js";
+
+@theme inline {
+  --radius-lg: var(--radius);
+  --color-background: var(--background);
+  --color-foreground: var(--foreground);
+  --color-card: var(--card);
+  --color-card-foreground: var(--foreground);
+  --color-primary: var(--primary);
+  --color-primary-foreground: var(--primary-foreground);
+  --color-muted: var(--muted);
+  --color-muted-foreground: var(--muted-foreground);
+  --color-border: var(--border);
+  --color-gold: var(--gold);
+  --color-banner: var(--banner);
+  --color-banner-foreground: var(--banner-foreground);
+  --color-cta: var(--cta);
+  --color-cta-hover: var(--cta-hover);
+  --color-cta-foreground: var(--cta-foreground);
+  --color-placeholder: var(--placeholder);
+  --font-serif: "Playfair Display", Georgia, serif;
+  --font-sans: "Inter", system-ui, sans-serif;
+}
+
+/* Fontes hospedadas no próprio site (subconjunto latin, woff2). font-display: swap = o texto aparece na hora. */
+@font-face { font-family: "Inter"; font-style: normal; font-weight: 400; font-display: swap; src: url(../fonts/inter-latin-400-normal.woff2) format("woff2"); }
+@font-face { font-family: "Inter"; font-style: normal; font-weight: 600; font-display: swap; src: url(../fonts/inter-latin-600-normal.woff2) format("woff2"); }
+@font-face { font-family: "Inter"; font-style: normal; font-weight: 800; font-display: swap; src: url(../fonts/inter-latin-800-normal.woff2) format("woff2"); }
+@font-face { font-family: "Playfair Display"; font-style: normal; font-weight: 600; font-display: swap; src: url(../fonts/playfair-display-latin-600-normal.woff2) format("woff2"); }
+@font-face { font-family: "Playfair Display"; font-style: normal; font-weight: 800; font-display: swap; src: url(../fonts/playfair-display-latin-800-normal.woff2) format("woff2"); }
+
+:root {
+  --radius: 1rem;
+  --background: #0F172A;
+  --foreground: #F8FAFC;
+  --card: #1E293B;
+  --primary: #D4A873;
+  --primary-foreground: #0F172A;
+  --muted: #334155;
+  --muted-foreground: #CBD5E1;
+  --border: rgba(212, 168, 115, 0.25);
+  --gold: #D4A873;
+  --banner: #FBBF24;
+  --banner-foreground: #111827;
+  --cta: #16A34A;
+  --cta-hover: #22C55E;
+  --cta-foreground: #FFFFFF;
+  --placeholder: #475569;
+}
+
+@layer base {
+  * { border-color: var(--color-border); }
+  html { scroll-behavior: smooth; }
+  body { background: var(--color-background); color: var(--color-foreground); font-family: var(--font-sans); }
+}
+
+@utility btn-cta {
+  display: inline-flex; align-items: center; justify-content: center; text-align: center;
+  width: 100%; max-width: 26rem; padding: 1rem 1.5rem; border-radius: 9999px;
+  background: var(--color-cta); color: var(--color-cta-foreground); font-weight: 800;
+  box-shadow: 0 10px 30px -10px var(--color-cta-hover); transition: transform .2s, background .2s;
+  animation: pulse-cta 2s infinite;
+  &:hover { background: var(--color-cta-hover); transform: scale(1.03); }
+}
+@keyframes pulse-cta { 0%,100% { transform: scale(1) } 50% { transform: scale(1.03) } }
+
+/* Promoção x preço cheio. A classe "fim" é colocada no <html> pelo script do <head> (e pelo contador) quando o prazo data-fim passa. */
+html:not(.fim) [data-regular] { display: none; }
+html.fim [data-promo] { display: none; }
+
+/* Primeira tela: altura = área visível (script define --app-h e --banner-h; 100svh é o plano B sem JS) */
+.fold { height: calc(var(--app-h, 100svh) - var(--banner-h, 44px)); min-height: 420px; }
+
+.deferred-section {
+  content-visibility: auto;
+  contain-intrinsic-size: auto 900px;
+}
+
+/* Mockup do topo: a largura acompanha a altura da tela para o botão ficar acima da dobra.
+   --pm-reserve = faixa + textos + botão. */
+.pm-stage { --pm-reserve: 275px; container-type: inline-size; position: relative; width: 100%;
+  max-width: min(440px, max(250px, calc((100vh - var(--pm-reserve)) / 1.04)));
+  max-width: min(440px, max(250px, calc((100svh - var(--pm-reserve)) / 1.04))); aspect-ratio: 1 / 1.04; }
+.pm-glow { position: absolute; inset: 4% 0 6%; background: radial-gradient(closest-side, color-mix(in srgb, var(--gold) 34%, transparent), transparent 74%); }
+.pm-sheet { position: absolute; right: 0; top: 8cqw; width: 67cqw; transform: rotate(3.5deg); border-radius: 2cqw; overflow: hidden;
+  box-shadow: 0 3cqw 8cqw rgba(0,0,0,.5); -webkit-mask-image: linear-gradient(#000 78%, transparent); mask-image: linear-gradient(#000 78%, transparent); }
+.pm-sheet img, .pm-phone img { display: block; width: 100%; height: auto; }
+.pm-phone { position: absolute; left: 0; top: 0; z-index: 2; width: 45cqw; background: #0a0a0c; border-radius: 6.8cqw; padding: 1.4cqw;
+  box-shadow: 0 4cqw 10cqw rgba(0,0,0,.6), 0 0 0 .35cqw #3a3a40; }
+.pm-phone img { border-radius: 5.5cqw; }
