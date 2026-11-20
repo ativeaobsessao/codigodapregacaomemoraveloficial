@@ -79,6 +79,8 @@ Ao adicionar imagem nova: .webp com até ~800 px de largura e `width`/`height` n
 - Build command: vazio (ou `exit 0`)
 - Build output directory: `site`
 
+O arquivo `wrangler.jsonc` na raiz do repositório (`pages_build_output_dir: "./site"`) já diz isso ao Cloudflare Pages, então publicar a branch `main` serve só esta pasta. Sem ele, o Pages publica a raiz do repositório (código antigo do Lovable, sem `index.html`) e todo endereço dá 404. Se o seu projeto Pages for renomeado, atualize o campo `name` do arquivo.
+
 ## Pendências conhecidas
 
 - `og:image` (miniatura de compartilhamento) ainda aponta para uma imagem hospedada fora do site; trocar por uma em `media/`.

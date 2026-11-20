@@ -1,0 +1,7 @@
+{
+  // Cloudflare Pages: publica SOMENTE a pasta site/ (a página de vendas estática).
+  // Sem isto, o Pages publica a raiz do repositório (código antigo do Lovable) e todo endereço dá 404.
+  "name": "codigodapregacaomemoravel-oficial",
+  "pages_build_output_dir": "./site",
+  "compatibility_date": "2026-11-20"
+}
